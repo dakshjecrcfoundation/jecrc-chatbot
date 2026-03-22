@@ -1,0 +1,55 @@
+/* ══════ MESSAGES AREA ══════ */
+.chat-messages {
+    flex: 1;
+    
+    /* 🔧 KEY FIX: Always show scrollbar */
+    overflow-y: scroll !important;
+    
+    padding: 24px;
+    padding-right: 16px;          /* Extra space for scrollbar */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: radial-gradient(ellipse at top, rgba(59,130,246,0.03) 0%, transparent 60%);
+    
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;    /* iOS smooth scroll */
+    overscroll-behavior: contain;         /* Prevent page scroll */
+    
+    /* Firefox scrollbar */
+    scrollbar-width: auto;
+    scrollbar-color: #3b82f6 #1a2236;
+}
+
+/* Chrome/Edge/Safari Scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #1a2236;
+    border-radius: 10px;
+    border: 1px solid #1e3a5f;
+    margin: 4px 0;               /* Gap at top and bottom */
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+    border-radius: 10px;
+    border: 2px solid #1a2236;
+    min-height: 60px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #60a5fa, #a78bfa);
+}
+
+.chat-messages::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+/* ✅ Scrollbar corner (bottom-right) */
+.chat-messages::-webkit-scrollbar-corner {
+    background: #1a2236;
+}

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: jecrc-chatbot
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python -c "import nltk; nltk.download('punkt_tab'); nltk.download('punkt'); nltk.download('wordnet')"
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120 --workers 2
+    envVars:
+      - key: FLASK_DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.11.0"

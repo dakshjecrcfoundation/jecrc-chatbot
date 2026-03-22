@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="JECRC Foundation AI Helpdesk - Ask about admissions, fees, placements, hostel and more!">
+    <title>JECRC Foundation - AI Helpdesk Chatbot | J-TECHTRIX 7.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ══════════════════════════════════════
+           COMPLETE CSS - JECRC AI CHATBOT
+           🔧 UPDATED: Mic Button + Visible Scrollbar
+           Project: J-TECHTRIX 7.0
+           ══════════════════════════════════════ */
+
+        /* ══════ CSS VARIABLES ══════ */
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-card: #162032;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-yellow: #f59e0b;
+            --accent-cyan: #06b6d4;
+            --border-color: #1e3a5f;
+            --gradient-primary: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --gradient-header: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --gradient-bot: linear-gradient(135deg, #162032, #1a1a3e);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.4);
+            --scrollbar-width: 10px;
+            --scrollbar-track: #1a2236;
+            --scrollbar-thumb: linear-gradient(180deg, #3b82f6, #8b5cf6);
+            --scrollbar-thumb-hover: linear-gradient(180deg, #60a5fa, #a78bfa);
+            --scrollbar-thumb-active: linear-gradient(180deg, #2563eb, #7c3aed);
+        }
+
+        /* ══════ RESET ══════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        a { text-decoration: none; color: var(--accent-blue); }
+        ul, ol { padding-left: 20px; }
+
+        /* ══════ SCROLLBAR - GLOBAL ══════ */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* ══════ SCROLLBAR - CHAT MESSAGES ══════ */
+        .chat-messages::-webkit-scrollbar {
+            width: var(--scrollbar-width);
+            display: block !important;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin: 4px 0;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 10px;
+            border: 2px solid var(--scrollbar-track);
+            min-height: 50px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover);
+            cursor: pointer;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:active {
+            background: var(--scrollbar-thumb-active);
+        }
+
+        .chat-messages::-webkit-scrollbar-corner {
+            background: var(--scrollbar-track);
+        }
+
+        /* ══════ SCROLLBAR - SIDEBAR ══════ */
+        .quick-topics::-webkit-scrollbar {
+            width: 6px;
+            display: block !important;
+        }
+
+        .quick-topics::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .quick-topics::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+        }
+
+        .quick-topics::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.5);
+        }
+
+        /* ══════ HEADER ══════ */
+        .header {
+            background: var(--gradient-header);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 24px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+            flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text p {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-header:hover {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .btn-admin {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.3);
+            color: var(--accent-purple);
+        }
+
+        /* ══════ MAIN CONTAINER ══════ */
+        .main-container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            height: calc(100vh - 65px - 42px);
+        }
+
+        /* ══════ SIDEBAR ══════ */
+        .sidebar {
+            width: 285px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .sidebar-header h3 {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .sidebar-header h3 i {
+            color: var(--accent-yellow);
+            margin-right: 8px;
+        }
+
+        #sidebarClose {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .quick-topics {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+        }
+
+        .topic-btn {
+            width: 100%;
+            text-align: left;
+            padding: 10px 14px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-btn:hover {
+            background: rgba(59, 130, 246, 0.08);
+            color: var(--accent-blue);
+            border-color: rgba(59, 130, 246, 0.15);
+            transform: translateX(4px);
+        }
+
+        .topic-btn i {
+            width: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .topic-btn:hover i { opacity: 1; }
+
+        .highlight-btn {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2) !important;
+            color: var(--accent-blue);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .sidebar-footer {
+            padding: 14px 16px;
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar-info p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 199;
+            backdrop-filter: blur(2px);
+        }
+
+        /* ══════ CHAT AREA ══════ */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-width: 0;
+            background: var(--bg-primary);
+        }
+
+        .chat-header {
+            padding: 14px 24px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .chat-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 8px 10px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        .bot-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bot-avatar-small {
+            width: 42px;
+            height: 42px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.25);
+        }
+
+        .bot-details h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .status-online {
+            font-size: 0.72rem;
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .header-action-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-action-btn:hover {
+            color: var(--accent-red);
+            border-color: var(--accent-red);
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        /* ══════ CHAT MESSAGES ══════ */
+        .chat-messages {
+            flex: 1;
+            overflow-y: scroll !important;
+            padding: 24px;
+            padding-right: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            scrollbar-width: auto;
+            scrollbar-color: #3b82f6 #1a2236;
+        }
+
+        /* ══════ MESSAGES ══════ */
+        .message {
+            display: flex;
+            gap: 12px;
+            max-width: 82%;
+            animation: fadeInUp 0.35s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bot-message { align-self: flex-start; }
+        .user-message { align-self: flex-end; flex-direction: row-reverse; }
+
+        .msg-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .bot-message .msg-avatar {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.2);
+        }
+
+        .user-message .msg-avatar {
+            background: var(--bg-tertiary);
+            color: var(--accent-cyan);
+            border: 1px solid var(--border-color);
+        }
+
+        .msg-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+        }
+
+        .msg-bubble {
+            padding: 14px 18px;
+            border-radius: 18px;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .bot-message .msg-bubble {
+            background: var(--gradient-bot);
+            border: 1px solid var(--border-color);
+            border-bottom-left-radius: 4px;
+            color: var(--text-primary);
+        }
+
+        .user-message .msg-bubble {
+            background: var(--gradient-primary);
+            border-bottom-right-radius: 4px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .msg-bubble p { margin-bottom: 8px; }
+        .msg-bubble p:last-child { margin-bottom: 0; }
+        .msg-bubble strong { color: #60a5fa; font-weight: 600; }
+        .user-message .msg-bubble strong { color: #dbeafe; }
+        .msg-bubble ul, .msg-bubble ol { margin: 6px 0; padding-left: 18px; }
+        .msg-bubble li { margin-bottom: 4px; }
+
+        .msg-time {
+            font-size: 0.67rem;
+            color: var(--text-muted);
+            padding: 0 4px;
+        }
+
+        .user-message .msg-time { text-align: right; }
+
+        .msg-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .msg-debug {
+            font-size: 0.63rem;
+            color: #475569;
+            margin-top: 2px;
+            padding: 0 4px;
+        }
+
+        /* ══════ WELCOME CHIPS ══════ */
+        .welcome-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
+        }
+
+        .welcome-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 24px;
+            font-size: 0.78rem;
+            color: var(--accent-blue);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .welcome-chip:hover {
+            background: rgba(59, 130, 246, 0.18);
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        /* ══════ FEEDBACK BUTTONS ══════ */
+        .feedback-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .fb-btn {
+            padding: 3px 12px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .fb-btn:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        .fb-btn.active {
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+        }
+
+        /* ══════ TYPING INDICATOR ══════ */
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            padding: 0 24px 12px;
+        }
+
+        .typing-indicator.show { display: flex; }
+
+        .typing-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-bot);
+            border: 1px solid var(--border-color);
+            padding: 12px 18px;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(1) { animation-delay: 0s; }
+        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
+            40% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .typing-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ══════ CHAT INPUT ══════ */
+        .chat-input-area {
+            padding: 14px 24px 16px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 28px;
+            padding: 5px 5px 5px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .input-wrapper input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            padding: 12px 0;
+        }
+
+        .input-wrapper input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .send-btn {
+            width: 46px;
+            height: 46px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .send-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.45);
+        }
+
+        .send-btn:active { transform: scale(0.95); }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ══════════════════════════════════════
+           🎤 MIC BUTTON - SEXY ANIMATED UI
+           ══════════════════════════════════════ */
+        .mic-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ✨ Shine sweep effect */
+        .mic-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 40%,
+                rgba(255, 255, 255, 0.15) 50%,
+                transparent 60%
+            );
+            animation: micShine 3s infinite;
+        }
+
+        @keyframes micShine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* Hover effect */
+        .mic-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 6px 30px rgba(6, 182, 212, 0.6);
+        }
+
+        /* Click effect */
+        .mic-btn:active {
+            transform: scale(0.92);
+        }
+
+        /* 🔴 Recording state */
+        .mic-btn.recording {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            animation: pulseMic 1.2s infinite;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.5);
+        }
+
+        .mic-btn.recording::before {
+            display: none;
+        }
+
+        .mic-btn.recording i {
+            animation: micBounce 0.6s infinite alternate;
+        }
+
+        @keyframes pulseMic {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 18px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        @keyframes micBounce {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        /* 🎤 Mic ring animation (outer glow ring) */
+        .mic-btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            animation: micRing 2s infinite;
+            pointer-events: none;
+        }
+
+        .mic-btn.recording::after {
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        @keyframes micRing {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        /* 🎤 Mic tooltip */
+        .mic-btn[title]:hover::after {
+            animation: none;
+        }
+
+        .input-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            padding: 0 10px;
+        }
+
+        .input-footer span {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+        }
+
+        .input-footer kbd {
+            background: var(--bg-tertiary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ══════ FOOTER ══════ */
+        .footer {
+            padding: 10px 24px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            flex-shrink: 0;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .footer a { color: var(--accent-blue); font-weight: 500; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* ══════ SHAKE ANIMATION ══════ */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-8px); }
+            40% { transform: translateX(8px); }
+            60% { transform: translateX(-5px); }
+            80% { transform: translateX(5px); }
+        }
+
+        /* ══════════════════════════════════════
+           📱 RESPONSIVE - TABLET (768px)
+           ══════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                left: -300px;
+                top: 65px;
+                bottom: 42px;
+                width: 280px;
+                z-index: 200;
+                transition: left 0.3s ease;
+                box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+            }
+            .sidebar.open { left: 0; }
+            .sidebar-overlay.show { display: block; }
+            #sidebarClose { display: block; }
+            .menu-btn { display: flex; }
+            .btn-text { display: none; }
+
+            .header { padding: 0 16px; height: 60px; }
+            .main-container { height: calc(100vh - 60px - 42px); }
+            .logo-text h1 { font-size: 1rem; }
+            .logo-text p { font-size: 0.6rem; }
+
+            .chat-messages {
+                padding: 16px;
+                padding-right: 10px;
+                gap: 14px;
+            }
+
+            .chat-messages::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .chat-messages::-webkit-scrollbar-thumb {
+                border: 1px solid var(--scrollbar-track);
+            }
+
+            .message { max-width: 92%; }
+            .chat-input-area { padding: 10px 16px 14px; }
+            .welcome-chip { font-size: 0.72rem; padding: 6px 11px; }
+
+            .input-wrapper input {
+                font-size: 16px !important;
+            }
+
+            /* 🎤 Mic button responsive */
+            .mic-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            .send-btn {
+                width: 42px;
+                height: 42px;
+            }
+        }
+
+        /* ══════════════════════════════════════
+           📱 RESPONSIVE - MOBILE SMALL (480px)
+           ══════════════════════════════════════ */
+        @media (max-width: 480px) {
+            .logo-icon { width: 36px; height: 36px; font-size: 1rem; }
+            .logo-text h1 { font-size: 0.9rem; }
+            .msg-bubble { font-size: 0.83rem; padding: 11px 14px; }
+            .bot-avatar-small { width: 36px; height: 36px; }
+            .input-wrapper input { font-size: 16px !important; }
+
+            .chat-messages::-webkit-scrollbar {
+                width: 7px;
+            }
+
+            .chat-messages {
+                padding: 12px;
+                padding-right: 8px;
+                gap: 12px;
+            }
+
+            .message { max-width: 95%; }
+            .welcome-chip { font-size: 0.68rem; padding: 5px 10px; }
+            .chat-header { padding: 10px 16px; }
+
+            .msg-avatar {
+                width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+
+            /* 🎤 Mic smaller on mobile */
+            .mic-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+            }
+
+            .send-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+            }
+
+            .input-wrapper {
+                gap: 6px;
+                padding: 4px 4px 4px 14px;
+            }
+        }
+
+        /* ══════════════════════════════════════
+           📱 RESPONSIVE - VERY SMALL (360px)
+           ══════════════════════════════════════ */
+        @media (max-width: 360px) {
+            .chat-messages::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .logo-section { gap: 8px; }
+            .logo-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+            .logo-text h1 { font-size: 0.82rem; }
+            .msg-bubble { font-size: 0.8rem; padding: 10px 12px; }
+            .welcome-grid { gap: 5px; }
+            .welcome-chip { font-size: 0.65rem; padding: 4px 8px; }
+
+            .mic-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+
+            .send-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+
+            .input-wrapper {
+                gap: 4px;
+                padding: 3px 3px 3px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════ HEADER ══════ -->
+<header class="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="logo-text">
+                <h1>JECRC Foundation</h1>
+                <p>AI Helpdesk Chatbot &bull; J-TECHTRIX 7.0</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <a href="https://jecrcfoundation.com" target="_blank" class="btn-header" title="College Website">
+                <i class="fas fa-globe"></i> <span class="btn-text">Website</span>
+            </a>
+            <a href="/admin" class="btn-header btn-admin" title="Admin Dashboard">
+                <i class="fas fa-chart-bar"></i> <span class="btn-text">Admin</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- ══════ MAIN CONTAINER ══════ -->
+<main class="main-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fas fa-bolt"></i> Quick Topics</h3>
+            <button id="sidebarClose" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="quick-topics">
+            <button class="topic-btn" onclick="sendQuick('What is the admission process?')"><i class="fas fa-user-plus"></i> Admission Process</button>
+            <button class="topic-btn" onclick="sendQuick('What are the eligibility criteria?')"><i class="fas fa-check-circle"></i> Eligibility</button>
+            <button class="topic-btn" onclick="sendQuick('What is the fee structure?')"><i class="fas fa-rupee-sign"></i> Fee Structure</button>
+            <button class="topic-btn" onclick="sendQuick('Tell me about scholarships')"><i class="fas fa-award"></i> Scholarships</button>
+            <button class="topic-btn" onclick="sendQuick('Tell me about departments and courses')"><i class="fas fa-building"></i> Departments</button>
+            <button class="topic-btn" onclick="sendQuick('Tell me about CSE department')"><i class="fas fa-laptop-code"></i> CSE Department</button>
+            <button class="topic-btn" onclick="sendQuick('Tell me about AI ML branch')"><i class="fas fa-robot"></i> AI & ML Branch</button>
+            <button class="topic-btn" onclick="sendQuick('Placement details and companies')"><i class="fas fa-briefcase"></i> Placements</button>
+            <button class="topic-btn" onclick="sendQuick('Hostel facilities')"><i class="fas fa-home"></i> Hostel</button>
+            <button class="topic-btn" onclick="sendQuick('Tell me about campus life')"><i class="fas fa-university"></i> Campus Life</button>
+            <button class="topic-btn" onclick="sendQuick('Library information')"><i class="fas fa-book"></i> Library</button>
+            <button class="topic-btn" onclick="sendQuick('Sports facilities')"><i class="fas fa-futbol"></i> Sports</button>
+            <button class="topic-btn" onclick="sendQuick('College events and fests')"><i class="fas fa-star"></i> Events & Fests</button>
+            <button class="topic-btn" onclick="sendQuick('Student clubs')"><i class="fas fa-users"></i> Clubs</button>
+            <button class="topic-btn" onclick="sendQuick('Exam schedule')"><i class="fas fa-calendar-alt"></i> Exams</button>
+            <button class="topic-btn" onclick="sendQuick('Attendance policy')"><i class="fas fa-clipboard-check"></i> Attendance</button>
+            <button class="topic-btn" onclick="sendQuick('Transport bus facility')"><i class="fas fa-bus"></i> Transport</button>
+            <button class="topic-btn" onclick="sendQuick('About JECRC Foundation')"><i class="fas fa-info-circle"></i> About JECRC</button>
+            <button class="topic-btn" onclick="sendQuick('Contact information')"><i class="fas fa-phone-alt"></i> Contact</button>
+            <button class="topic-btn" onclick="sendQuick('Anti ragging policy')"><i class="fas fa-shield-alt"></i> Anti-Ragging</button>
+            <button class="topic-btn highlight-btn" onclick="sendQuick('help')"><i class="fas fa-question-circle"></i> Show All Topics</button>
+        </div>
+        <div class="sidebar-footer">
+            <div class="sidebar-info">
+                <p>🤖 AI-Powered Assistant</p>
+                <p>📌 J-TECHTRIX 7.0 Project</p>
+                <p>🏛️ JECRC Foundation, Jaipur</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Chat Area -->
+    <section class="chat-area">
+
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <button class="menu-btn" onclick="toggleSidebar()" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="bot-info">
+                    <div class="bot-avatar-small">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="bot-details">
+                        <h3>JECRC Helpdesk AI</h3>
+                        <span class="status-online">
+                            <span class="status-dot"></span> Online &bull; Ready to help
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-header-right">
+                <button onclick="clearChat()" class="header-action-btn" title="Clear Chat">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+                <div class="msg-content">
+                    <div class="msg-bubble">
+                        <p>Hello! 👋 Welcome to <strong>JECRC Foundation</strong> Helpdesk AI.</p>
+                        <p>I can help you with information about our college. Click a topic or type your question!</p>
+                        <div class="welcome-grid">
+                            <span class="welcome-chip" onclick="sendQuick('admission process')">📋 Admissions</span>
+                            <span class="welcome-chip" onclick="sendQuick('fee structure')">💰 Fees</span>
+                            <span class="welcome-chip" onclick="sendQuick('departments')">🏛️ Departments</span>
+                            <span class="welcome-chip" onclick="sendQuick('placements')">💼 Placements</span>
+                            <span class="welcome-chip" onclick="sendQuick('hostel facilities')">🏠 Hostel</span>
+                            <span class="welcome-chip" onclick="sendQuick('campus life')">🌟 Campus Life</span>
+                            <span class="welcome-chip" onclick="sendQuick('scholarships')">🏆 Scholarships</span>
+                            <span class="welcome-chip" onclick="sendQuick('contact information')">📞 Contact</span>
+                        </div>
+                        <p><em>Type your question below or click a topic above! 😊</em></p>
+                    </div>
+                    <span class="msg-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+            <div class="typing-content">
+                <div class="typing-dots"><span></span><span></span><span></span></div>
+                <span class="typing-text">Thinking...</span>
+            </div>
+        </div>
+
+        <!-- 🔥 INPUT WITH MIC BUTTON -->
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="userInput"
+                       placeholder="Ask me anything about JECRC Foundation..."
+                       autocomplete="off" maxlength="500"
+                       onkeypress="handleKeyPress(event)">
+
+                <button onclick="sendMessage()" id="sendBtn" class="send-btn" title="Send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+                <!-- 🎤 SEXY MIC BUTTON -->
+                <button id="micBtn" class="mic-btn" title="Hold to Speak">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span>Press <kbd>Enter</kbd> to send &bull; Click 🎤 to speak</span>
+                <span class="char-count" id="charCount">0/500</span>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>
+        🎓 JECRC Foundation AI Helpdesk &bull;
+        <strong>J-TECHTRIX 7.0</strong> &bull; © 2025 &bull;
+        <a href="https://jecrcfoundation.com" target="_blank">jecrcfoundation.com</a>
+    </p>
+</footer>
+
+<!-- 🔧 SCROLL FIX -->
+<style>
+    .chat-area {
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .main-container {
+        min-height: 0 !important;
+    }
+
+    #chatMessages {
+        min-height: 0 !important;
+        flex: 1 1 0px !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        max-height: calc(100vh - 280px) !important;
+    }
+
+    #chatMessages::-webkit-scrollbar {
+        width: 10px !important;
+        display: block !important;
+    }
+
+    #chatMessages::-webkit-scrollbar-track {
+        background: #1e293b !important;
+        border-radius: 8px !important;
+    }
+
+    #chatMessages::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6, #8b5cf6) !important;
+        border-radius: 8px !important;
+        border: 2px solid #1e293b !important;
+        min-height: 40px !important;
+    }
+
+    #chatMessages::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #60a5fa, #a78bfa) !important;
+    }
+
+    @media (max-width: 768px) {
+        #chatMessages {
+            max-height: calc(100vh - 240px) !important;
+        }
+        #chatMessages::-webkit-scrollbar {
+            width: 8px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #chatMessages {
+            max-height: calc(100vh - 220px) !important;
+        }
+        #chatMessages::-webkit-scrollbar {
+            width: 7px !important;
+        }
+    }
+
+    /* ══════════════════════════════════════
+       🔥 FORMAT CHOICE BUTTONS
+       ══════════════════════════════════════ */
+    .format-choice-btns {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+        flex-wrap: wrap;
+    }
+
+    .format-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        border-radius: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .format-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .format-btn:active {
+        transform: scale(0.95);
+    }
+
+    /* ✨ Shine effect on buttons */
+    .format-btn::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            45deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.12) 50%,
+            transparent 60%
+        );
+        animation: btnShine 3s infinite;
+    }
+
+    @keyframes btnShine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    /* 📝 Text Only Button */
+    .format-text {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .format-text:hover {
+        box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+        border-color: rgba(59, 130, 246, 0.6);
+    }
+
+    /* 🔊 Speech Only Button */
+    .format-speech {
+        background: linear-gradient(135deg, #10b981, #059669);
+        border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .format-speech:hover {
+        box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+        border-color: rgba(16, 185, 129, 0.6);
+    }
+
+    /* ✨ Both Button */
+    .format-both {
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .format-both:hover {
+        box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+        border-color: rgba(139, 92, 246, 0.6);
+    }
+
+    /* 🔥 Button icon animation on hover */
+    .format-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .format-btn:hover i {
+        transform: scale(1.2);
+    }
+
+    /* 📱 Mobile responsive */
+    @media (max-width: 480px) {
+        .format-choice-btns {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .format-btn {
+            justify-content: center;
+            padding: 10px 16px;
+            font-size: 0.78rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .format-btn {
+            padding: 8px 12px;
+            font-size: 0.72rem;
+            gap: 6px;
+        }
+    }
+</style>
+
+<!-- JavaScript -->
+<script src="/static/js/chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,894 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "namaste", "hi there", "kaise ho", "kya haal hai", "greetings", "wassup", "hola"],
+      "responses": ["Hello! 👋 Welcome to JECRC Foundation Helpdesk.\nAsk me anything about JECRC - admissions, courses, placements, hostel, campus life!\n\nHow may I help you?"],
+      "responses_hi": ["नमस्ते! 👋 JECRC Foundation Helpdesk में आपका स्वागत है।\nJECRC के बारे में कुछ भी पूछें - एडमिशन, कोर्सेज, प्लेसमेंट, हॉस्टल, कैंपस लाइफ!\n\nमैं आपकी कैसे मदद कर सकता हूँ?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "see ya", "thanks bye", "good night", "take care", "alvida", "ok bye", "gtg"],
+      "responses": ["Goodbye! 👋 Feel free to come back anytime you need help!", "See you later! 😊 All the best with your studies at JECRC!"],
+      "responses_hi": ["अलविदा! 👋 जब भी मदद चाहिए, वापस आ जाइए!", "फिर मिलेंगे! 😊 JECRC में आपकी पढ़ाई के लिए शुभकामनाएं!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thank you so much", "thanks a lot", "thanku", "dhanyawad", "shukriya", "much appreciated", "great help"],
+      "responses": ["You're welcome! 😊 Happy to help!", "Glad I could assist you! Feel free to ask more questions."],
+      "responses_hi": ["आपका स्वागत है! 😊 मदद करके खुशी हुई!", "खुशी हुई आपकी सहायता करके! और कुछ पूछना हो तो बेझिझक पूछें।"]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": ["who are you", "what are you", "are you a bot", "what is your name", "tell me about yourself", "tu kaun hai", "aap kaun ho", "how do you work"],
+      "responses": ["I'm the JECRC Foundation Helpdesk AI Assistant! 🤖\nI can help you with Admissions, Fees, Placements, Hostel, Departments, and Campus Life. Just ask!"],
+      "responses_hi": ["मैं JECRC Foundation Helpdesk AI Assistant हूँ! 🤖\nमैं आपकी एडमिशन, फीस, प्लेसमेंट, हॉस्टल, डिपार्टमेंट और कैंपस लाइफ से जुड़ी मदद कर सकता हूँ। बस पूछिए!"]
+    },
+    {
+      "tag": "about_college",
+      "patterns": ["about college", "about jecrc", "tell me about jecrc", "college details", "what is jecrc", "history of jecrc", "who founded jecrc", "jecrc full form"],
+      "responses": ["🏛️ **About JECRC Foundation:**\n🔹 **Established:** 2000\n🔹 **Approved by:** AICTE, New Delhi\n🔹 **Affiliated to:** RTU, Kota\n🔹 **NAAC & NBA Accredited**\nJECRC is one of Rajasthan's top engineering institutions known for quality education and placements.\n🌐 https://jecrcfoundation.com"],
+      "responses_hi": ["🏛️ **JECRC Foundation के बारे में:**\n🔹 **स्थापना:** 2000\n🔹 **अनुमोदित:** AICTE, नई दिल्ली\n🔹 **संबद्ध:** RTU, कोटा\n🔹 **NAAC और NBA मान्यता प्राप्त**\nJECRC राजस्थान के शीर्ष इंजीनियरिंग संस्थानों में से एक है, जो गुणवत्तापूर्ण शिक्षा और प्लेसमेंट के लिए प्रसिद्ध है।\n🌐 https://jecrcfoundation.com"]
+    },
+    {
+      "tag": "chairman_management",
+      "patterns": ["chairman", "who is chairman", "management", "founder", "who founded jecrc", "op agarwal", "amit agarwal", "owner of jecrc"],
+      "responses": ["👔 **JECRC Foundation Management:**\n🔹 **Chairman:** Shri O.P. Agarwal\n🔹 **Vice Chairman:** Shri Amit Agarwal\n🔹 **Director:** Dr. V.K. Chandna\nThe management is dedicated to making JECRC a center of excellence in technical education."],
+      "responses_hi": ["👔 **JECRC Foundation प्रबंधन:**\n🔹 **चेयरमैन:** श्री O.P. अग्रवाल\n🔹 **वाइस चेयरमैन:** श्री अमित अग्रवाल\n🔹 **डायरेक्टर:** डॉ. V.K. चंदना\nप्रबंधन JECRC को तकनीकी शिक्षा में उत्कृष्टता का केंद्र बनाने के लिए समर्पित है।"]
+    },
+    {
+      "tag": "director_principal",
+      "patterns": ["director", "principal", "who is principal", "who is director", "college principal", "vk chandna"],
+      "responses": ["🎓 **Director / Principal:**\n🔹 **Dr. V.K. Chandna** - Heads all academic and administrative operations.\n📍 Director's Office is in the Main Administrative Building."],
+      "responses_hi": ["🎓 **डायरेक्टर / प्रिंसिपल:**\n🔹 **डॉ. V.K. चंदना** - सभी शैक्षणिक और प्रशासनिक कार्यों का नेतृत्व करते हैं।\n📍 डायरेक्टर का कार्यालय मुख्य प्रशासनिक भवन में है।"]
+    },
+    {
+      "tag": "vision_mission",
+      "patterns": ["vision", "mission", "college vision", "jecrc vision", "vision and mission", "motto", "core values"],
+      "responses": ["🎯 **Vision & Mission:**\nTo become a center of excellence in technical education and research, producing globally competent professionals. We focus on innovation, ethics, and industry-ready skills."],
+      "responses_hi": ["🎯 **विज़न और मिशन:**\nतकनीकी शिक्षा और अनुसंधान में उत्कृष्टता का केंद्र बनना, विश्व स्तर पर सक्षम पेशेवर तैयार करना। हमारा ध्यान नवाचार, नैतिकता और इंडस्ट्री-रेडी स्किल्स पर है।"]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": ["how to get admission", "admission process", "how to apply", "admission procedure", "admission kaise hota hai", "apply for admission", "admission form", "new admission"],
+      "responses": ["🎓 **Admission Process:**\n1️⃣ Appear for **JEE Main**\n2️⃣ Register on **REAP Portal** (reap.rajasthan.gov.in)\n3️⃣ Choose JECRC in choice filling\n4️⃣ Get allotted & report to campus for document verification\n🔹 Direct/Management quota admission is also available based on 12th marks.\n📞 Helpline: +91-141-2770232"],
+      "responses_hi": ["🎓 **एडमिशन प्रक्रिया:**\n1️⃣ **JEE Main** परीक्षा दें\n2️⃣ **REAP पोर्टल** पर रजिस्ट्रेशन करें (reap.rajasthan.gov.in)\n3️⃣ Choice filling में JECRC चुनें\n4️⃣ Allotment मिलने पर कैंपस में डॉक्यूमेंट वेरिफिकेशन कराएं\n🔹 12वीं के नंबर के आधार पर Direct/Management quota एडमिशन भी उपलब्ध है।\n📞 हेल्पलाइन: +91-141-2770232"]
+    },
+    {
+      "tag": "admission_eligibility",
+      "patterns": ["eligibility", "eligibility criteria", "who can apply", "minimum marks required", "am i eligible", "eligibility for btech", "kitne marks chahiye", "cutoff"],
+      "responses": ["📋 **Eligibility Criteria:**\n🔹 **B.Tech:** 10+2 with PCM, Minimum 45% marks (40% for SC/ST/OBC).\n🔹 **B.Tech Lateral Entry:** Diploma with 45% marks.\n🔹 **M.Tech:** B.Tech with 50% marks.\n🔹 **MBA/MCA:** Graduation with 50% marks."],
+      "responses_hi": ["📋 **पात्रता मानदंड:**\n🔹 **B.Tech:** 12वीं PCM से, न्यूनतम 45% अंक (SC/ST/OBC के लिए 40%)।\n🔹 **B.Tech लेटरल एंट्री:** डिप्लोमा में 45% अंक।\n🔹 **M.Tech:** B.Tech में 50% अंक।\n🔹 **MBA/MCA:** ग्रेजुएशन में 50% अंक।"]
+    },
+    {
+      "tag": "admission_documents",
+      "patterns": ["required documents", "documents needed", "document list", "papers required", "kaun se documents chahiye", "kya kya lana hai", "original documents"],
+      "responses": ["📄 **Documents Required:**\n✅ 10th & 12th Marksheets (Original + Photocopies)\n✅ JEE Main Scorecard / REAP Allotment\n✅ Transfer & Migration Certificate\n✅ Aadhaar Card & Photographs\n✅ Caste/Domicile Certificate (if applicable)\n✅ Gap Certificate (if applicable)"],
+      "responses_hi": ["📄 **ज़रूरी दस्तावेज़:**\n✅ 10वीं और 12वीं की मार्कशीट (ओरिजिनल + फोटोकॉपी)\n✅ JEE Main स्कोरकार्ड / REAP Allotment Letter\n✅ ट्रांसफर और माइग्रेशन सर्टिफिकेट\n✅ आधार कार्ड और फोटोग्राफ\n✅ जाति/मूल निवास प्रमाण पत्र (यदि लागू हो)\n✅ गैप सर्टिफिकेट (यदि लागू हो)"]
+    },
+    {
+      "tag": "admission_lateral",
+      "patterns": ["lateral entry", "direct second year", "diploma to btech", "lateral admission", "second year direct", "after diploma", "diploma se btech"],
+      "responses": ["📋 **Lateral Entry (Direct 2nd Year):**\nDiploma holders can directly join B.Tech 2nd year through REAP Lateral Entry Counselling. You need min 45% in your Diploma."],
+      "responses_hi": ["📋 **लेटरल एंट्री (सीधे 2nd Year में):**\nडिप्लोमा होल्डर REAP लेटरल एंट्री काउंसलिंग के ज़रिए सीधे B.Tech के दूसरे साल में एडमिशन ले सकते हैं। डिप्लोमा में न्यूनतम 45% अंक ज़रूरी हैं।"]
+    },
+    {
+      "tag": "reap_counselling",
+      "patterns": ["reap", "reap counselling", "reap process", "reap registration", "reap kya hai", "rajasthan counselling"],
+      "responses": ["📋 **REAP Counselling:**\nREAP (Rajasthan Engineering Admission Process) is the official centralized counselling for B.Tech in Rajasthan. Register at reap.rajasthan.gov.in and fill JECRC as your top choice!"],
+      "responses_hi": ["📋 **REAP काउंसलिंग:**\nREAP (Rajasthan Engineering Admission Process) राजस्थान में B.Tech के लिए आधिकारिक केंद्रीकृत काउंसलिंग है। reap.rajasthan.gov.in पर रजिस्टर करें और JECRC को अपनी पहली पसंद भरें!"]
+    },
+    {
+      "tag": "jee_main",
+      "patterns": ["jee", "jee main", "jee score", "jee required", "jee main cutoff", "without jee", "jee ke bina admission"],
+      "responses": ["📝 **JEE Main Info:**\nJEE Main score is highly preferred for REAP counselling to get top branches like CSE/IT. However, direct admission based on 12th marks is also possible through management quota."],
+      "responses_hi": ["📝 **JEE Main जानकारी:**\nREAP काउंसलिंग में CSE/IT जैसी टॉप ब्रांच पाने के लिए JEE Main स्कोर बहुत ज़रूरी है। हालांकि, 12वीं के नंबर के आधार पर मैनेजमेंट कोटा से डायरेक्ट एडमिशन भी संभव है।"]
+    },
+    {
+      "tag": "admission_management_quota",
+      "patterns": ["management quota", "direct admission without jee", "donation admission", "spot round", "second counselling", "spot admission", "management seat", "paid seat", "without entrance exam"],
+      "responses": ["📋 **Management/Direct Quota:**\n🔹 Available based on 12th marks (PCM) without JEE.\n🔹 Spot rounds conducted if seats remain after REAP.\n🔹 Contact Admission Cell directly: 0141-2770232\n⚠️ Apply early as seats fill fast!"],
+      "responses_hi": ["📋 **मैनेजमेंट/डायरेक्ट कोटा:**\n🔹 12वीं (PCM) के नंबर के आधार पर, JEE के बिना उपलब्ध।\n🔹 REAP के बाद सीटें बचने पर स्पॉट राउंड होते हैं।\n🔹 एडमिशन सेल से सीधे संपर्क करें: 0141-2770232\n⚠️ जल्दी अप्लाई करें, सीटें जल्दी भरती हैं!"]
+    },
+    {
+      "tag": "admission_nri_international",
+      "patterns": ["nri admission", "international student", "foreign student", "nri quota", "can nri apply", "overseas admission", "videsh se admission"],
+      "responses": ["🌍 **NRI / International Admission:**\nNRI quota seats are available in select branches.\n🔹 Documents: Passport, NRI Certificate, Academic transcripts.\n📞 Contact International Admission Cell: 0141-2770232\n📧 info@jecrcfoundation.com"],
+      "responses_hi": ["🌍 **NRI / अंतर्राष्ट्रीय एडमिशन:**\nचुनिंदा ब्रांच में NRI कोटा सीटें उपलब्ध हैं।\n🔹 दस्तावेज़: पासपोर्ट, NRI प्रमाण पत्र, शैक्षणिक ट्रांसक्रिप्ट।\n📞 अंतर्राष्ट्रीय एडमिशन सेल: 0141-2770232\n📧 info@jecrcfoundation.com"]
+    },
+    {
+      "tag": "admission_age_limit",
+      "patterns": ["age limit", "maximum age", "minimum age", "age criteria", "age restriction", "kitni age chahiye", "age bar"],
+      "responses": ["📋 **Age Criteria:**\nAs per AICTE norms, there is no upper age limit for B.Tech admission. You just need to have passed 12th with PCM and meet the eligibility criteria."],
+      "responses_hi": ["📋 **उम्र सीमा:**\nAICTE के नियमानुसार, B.Tech एडमिशन के लिए कोई अधिकतम उम्र सीमा नहीं है। बस 12वीं PCM से पास होना और पात्रता मानदंड पूरा करना ज़रूरी है।"]
+    },
+    {
+      "tag": "admission_stream_eligibility",
+      "patterns": ["commerce se btech", "arts se engineering", "pcb se btech", "biology student", "non pcm student", "without maths", "can arts student apply", "science without maths"],
+      "responses": ["📋 **Stream Eligibility:**\n❌ B.Tech requires **PCM (Physics, Chemistry, Mathematics)** in 12th.\n🔹 PCB/Commerce/Arts students cannot directly join B.Tech.\n🔹 However, MBA and MCA (with Maths in graduation) are open to all streams."],
+      "responses_hi": ["📋 **स्ट्रीम पात्रता:**\n❌ B.Tech के लिए 12वीं में **PCM (भौतिकी, रसायन, गणित)** ज़रूरी है।\n🔹 PCB/कॉमर्स/आर्ट्स के छात्र सीधे B.Tech में एडमिशन नहीं ले सकते।\n🔹 हालांकि, MBA और MCA (ग्रेजुएशन में गणित के साथ) सभी स्ट्रीम के लिए खुले हैं।"]
+    },
+    {
+      "tag": "seat_matrix",
+      "patterns": ["seat matrix", "total seats", "how many seats", "seats available", "kitni seats hai", "vacancy", "seat availability", "waiting list", "seats left"],
+      "responses": ["📊 **Seat Matrix (Approximate):**\n🔹 CSE: 180 | CSE-AIML: 60 | CSE-DS: 60 | CSE-CS: 60\n🔹 IT: 120 | ECE: 120 | EE: 60\n🔹 ME: 120 | CE: 60\n🔹 MBA: 60 | MCA: 60\n📞 For current availability: 0141-2770232"],
+      "responses_hi": ["📊 **सीट मैट्रिक्स (अनुमानित):**\n🔹 CSE: 180 | CSE-AIML: 60 | CSE-DS: 60 | CSE-CS: 60\n🔹 IT: 120 | ECE: 120 | EE: 60\n🔹 ME: 120 | CE: 60\n🔹 MBA: 60 | MCA: 60\n📞 वर्तमान उपलब्धता के लिए: 0141-2770232"]
+    },
+    {
+      "tag": "admission_counselling_help",
+      "patterns": ["choice filling help", "how to fill choices", "reap choice filling", "counselling tips", "which branch to fill first", "preference order"],
+      "responses": ["📋 **REAP Choice Filling Tips:**\n1️⃣ Fill CSE as 1st choice (highest demand).\n2️⃣ Order: CSE > IT > AI-ML > DS > ECE > EE > ME > CE\n3️⃣ Fill ALL branches to maximize allotment chances.\n4️⃣ Lock your choices before deadline!\n📞 Admission Helpline: 0141-2770232 for guidance."],
+      "responses_hi": ["📋 **REAP Choice Filling टिप्स:**\n1️⃣ CSE को पहली पसंद भरें (सबसे ज़्यादा डिमांड)।\n2️⃣ क्रम: CSE > IT > AI-ML > DS > ECE > EE > ME > CE\n3️⃣ Allotment की संभावना बढ़ाने के लिए सभी ब्रांच भरें।\n4️⃣ डेडलाइन से पहले अपनी पसंद लॉक करें!\n📞 एडमिशन हेल्पलाइन: 0141-2770232"]
+    },
+    {
+      "tag": "admission_deadline",
+      "patterns": ["last date", "deadline", "admission last date", "form last date", "registration deadline", "kab tak apply kar sakte hai"],
+      "responses": ["📅 **Admission Deadlines:**\n🔹 **REAP Counselling:** Usually July-September (check reap.rajasthan.gov.in for exact dates).\n🔹 **Direct/Management Quota:** Open until seats are filled (usually till August-September).\n🔹 **Lateral Entry:** August-September.\n⚠️ Apply early for best branch preferences!\n📞 Admission Cell: 0141-2770232"],
+      "responses_hi": ["📅 **एडमिशन डेडलाइन:**\n🔹 **REAP काउंसलिंग:** आमतौर पर जुलाई-सितंबर (सटीक तारीखों के लिए reap.rajasthan.gov.in देखें)।\n🔹 **डायरेक्ट/मैनेजमेंट कोटा:** सीटें भरने तक खुला (आमतौर पर अगस्त-सितंबर तक)।\n🔹 **लेटरल एंट्री:** अगस्त-सितंबर।\n⚠️ बेहतर ब्रांच के लिए जल्दी अप्लाई करें!\n📞 एडमिशन सेल: 0141-2770232"]
+    },
+    {
+      "tag": "departments",
+      "patterns": ["departments", "branches", "courses offered", "available branches", "engineering branches", "btech branches", "course list"],
+      "responses": ["🏛️ **Programs Offered:**\n🔹 B.Tech: CSE, IT, ECE, EE, ME, CE\n🔹 B.Tech Specializations: AI & ML, Data Science, Cyber Security\n🔹 M.Tech, MBA, and MCA\nAll are AICTE approved and affiliated to RTU!"],
+      "responses_hi": ["🏛️ **उपलब्ध प्रोग्राम:**\n🔹 B.Tech: CSE, IT, ECE, EE, ME, CE\n🔹 B.Tech स्पेशलाइज़ेशन: AI & ML, Data Science, Cyber Security\n🔹 M.Tech, MBA, और MCA\nसभी AICTE अनुमोदित और RTU से संबद्ध हैं!"]
+    },
+    {
+      "tag": "cse_department",
+      "patterns": ["computer science", "cse", "cse department", "computer engineering", "cse branch", "about cse", "cse placement"],
+      "responses": ["💻 **Computer Science & Engg (CSE):**\nThe most sought-after branch with 180+ seats. Offers specializations in AI-ML, Data Science, and Cyber Security. Known for the highest placement packages (₹44 LPA+) and active coding clubs!"],
+      "responses_hi": ["💻 **कंप्यूटर साइंस एंड इंजीनियरिंग (CSE):**\n180+ सीटों वाली सबसे ज़्यादा डिमांड वाली ब्रांच। AI-ML, Data Science और Cyber Security में स्पेशलाइज़ेशन उपलब्ध। सबसे ज़्यादा प्लेसमेंट पैकेज (₹44 LPA+) और एक्टिव कोडिंग क्लब के लिए जानी जाती है!"]
+    },
+    {
+      "tag": "aiml_specialization",
+      "patterns": ["ai ml", "artificial intelligence", "machine learning", "ai ml branch", "ai specialization", "ai engineering", "btech ai", "ai course"],
+      "responses": ["🤖 **AI & Machine Learning (CSE-AIML):**\nOne of the most in-demand specializations! Covers Deep Learning, NLP, Computer Vision, and Data Analytics.\n🔹 Seats: 60\n🔹 Excellent placement prospects in AI/Data roles.\n🔹 Dedicated AI Lab with GPU workstations.\nAffiliated to RTU and AICTE approved."],
+      "responses_hi": ["🤖 **AI & Machine Learning (CSE-AIML):**\nसबसे ज़्यादा डिमांड वाली स्पेशलाइज़ेशन! Deep Learning, NLP, Computer Vision और Data Analytics कवर होता है।\n🔹 सीटें: 60\n🔹 AI/Data रोल में शानदार प्लेसमेंट।\n🔹 GPU वर्कस्टेशन वाली डेडिकेटेड AI लैब।\nRTU से संबद्ध और AICTE अनुमोदित।"]
+    },
+    {
+      "tag": "data_science_specialization",
+      "patterns": ["data science", "data analytics", "big data", "data science branch", "btech data science", "ds branch"],
+      "responses": ["📊 **Data Science Specialization (CSE-DS):**\nFocuses on Big Data, Machine Learning, Statistical Analysis, and Business Intelligence.\n🔹 Seats: 60\n🔹 Tools: Python, R, Tableau, Hadoop, Spark.\n🔹 High demand in Analytics & IT companies.\nAffiliated to RTU and AICTE approved."],
+      "responses_hi": ["📊 **Data Science स्पेशलाइज़ेशन (CSE-DS):**\nBig Data, Machine Learning, Statistical Analysis और Business Intelligence पर फोकस।\n🔹 सीटें: 60\n🔹 टूल्स: Python, R, Tableau, Hadoop, Spark।\n🔹 Analytics और IT कंपनियों में बहुत डिमांड।\nRTU से संबद्ध और AICTE अनुमोदित।"]
+    },
+    {
+      "tag": "cyber_security_specialization",
+      "patterns": ["cyber security", "ethical hacking", "information security", "cyber branch", "btech cyber security", "hacking course"],
+      "responses": ["🔒 **Cyber Security Specialization (CSE-CS):**\nCovers Ethical Hacking, Network Security, Cryptography, and Digital Forensics.\n🔹 Seats: 60\n🔹 Dedicated Cyber Security Lab.\n🔹 Growing career opportunities in Cybersecurity firms & Govt agencies.\nAffiliated to RTU and AICTE approved."],
+      "responses_hi": ["🔒 **Cyber Security स्पेशलाइज़ेशन (CSE-CS):**\nEthical Hacking, Network Security, Cryptography और Digital Forensics कवर होता है।\n🔹 सीटें: 60\n🔹 डेडिकेटेड Cyber Security लैब।\n🔹 साइबर सिक्योरिटी फर्म और सरकारी एजेंसियों में बढ़ते करियर अवसर।\nRTU से संबद्ध और AICTE अनुमोदित।"]
+    },
+    {
+      "tag": "it_department",
+      "patterns": ["information technology", "it department", "it branch", "it engineering", "btech it", "it vs cse"],
+      "responses": ["💻 **Information Technology (IT):**\nFocuses on Software Development, Web Technologies, Databases, and Networking.\n🔹 Seats: 120\n🔹 Placement rate nearly equal to CSE.\n🔹 Strong coding culture and active tech clubs.\nOne of the top-choice branches at JECRC!"],
+      "responses_hi": ["💻 **इंफॉर्मेशन टेक्नोलॉजी (IT):**\nSoftware Development, Web Technologies, Databases और Networking पर फोकस।\n🔹 सीटें: 120\n🔹 प्लेसमेंट रेट CSE के लगभग बराबर।\n🔹 मज़बूत कोडिंग कल्चर और एक्टिव टेक क्लब।\nJECRC की टॉप-चॉइस ब्रांच में से एक!"]
+    },
+    {
+      "tag": "ece_department",
+      "patterns": ["ece", "electronics", "electronics and communication", "ece department", "ece branch", "btech ece"],
+      "responses": ["📡 **Electronics & Communication Engg (ECE):**\nCovers VLSI, Embedded Systems, IoT, Signal Processing, and Telecom.\n🔹 Seats: 120\n🔹 Well-equipped labs (VLSI, Microprocessor, Communication).\n🔹 Placements in both Core Electronics & IT companies."],
+      "responses_hi": ["📡 **इलेक्ट्रॉनिक्स एंड कम्युनिकेशन इंजीनियरिंग (ECE):**\nVLSI, Embedded Systems, IoT, Signal Processing और Telecom कवर होता है।\n🔹 सीटें: 120\n🔹 अच्छी तरह सुसज्जित लैब (VLSI, Microprocessor, Communication)।\n🔹 Core Electronics और IT दोनों कंपनियों में प्लेसमेंट।"]
+    },
+    {
+      "tag": "ee_department",
+      "patterns": ["electrical engineering", "ee department", "ee branch", "btech electrical", "electrical"],
+      "responses": ["⚡ **Electrical Engineering (EE):**\nCovers Power Systems, Control Systems, Electrical Machines, and Renewable Energy.\n🔹 Seats: 60\n🔹 Placements in Power sector (L&T, Schneider, Siemens) + IT companies.\n🔹 Good scope in Govt jobs (RSEB, NTPC, BHEL)."],
+      "responses_hi": ["⚡ **इलेक्ट्रिकल इंजीनियरिंग (EE):**\nPower Systems, Control Systems, Electrical Machines और Renewable Energy कवर होता है।\n🔹 सीटें: 60\n🔹 पावर सेक्टर (L&T, Schneider, Siemens) + IT कंपनियों में प्लेसमेंट।\n🔹 सरकारी नौकरियों में अच्छा स्कोप (RSEB, NTPC, BHEL)।"]
+    },
+    {
+      "tag": "me_department",
+      "patterns": ["mechanical engineering", "me department", "mechanical branch", "btech mechanical", "mechanical"],
+      "responses": ["⚙️ **Mechanical Engineering (ME):**\nCovers Thermodynamics, Manufacturing, Robotics, CAD/CAM, and Automobile Engg.\n🔹 Seats: 120\n🔹 CNC Lab, 3D Printing Lab, Workshop.\n🔹 Placements in L&T, Tata Motors, Maruti + IT companies.\n🔹 Great scope in GATE & Govt exams."],
+      "responses_hi": ["⚙️ **मैकेनिकल इंजीनियरिंग (ME):**\nThermodynamics, Manufacturing, Robotics, CAD/CAM और Automobile Engg. कवर होता है।\n🔹 सीटें: 120\n🔹 CNC लैब, 3D Printing लैब, वर्कशॉप।\n🔹 L&T, Tata Motors, Maruti + IT कंपनियों में प्लेसमेंट।\n🔹 GATE और सरकारी परीक्षाओं में बढ़िया स्कोप।"]
+    },
+    {
+      "tag": "ce_department",
+      "patterns": ["civil engineering", "ce department", "civil branch", "btech civil", "civil"],
+      "responses": ["🏗️ **Civil Engineering (CE):**\nCovers Structural Engg, Geotechnical, Transportation, Environmental Engg.\n🔹 Seats: 60\n🔹 Survey Lab, Concrete Lab, Soil Mechanics Lab.\n🔹 Placements in L&T, construction firms + Govt jobs (PWD, NHAI)."],
+      "responses_hi": ["🏗️ **सिविल इंजीनियरिंग (CE):**\nStructural Engg, Geotechnical, Transportation, Environmental Engg. कवर होता है।\n🔹 सीटें: 60\n🔹 Survey लैब, Concrete लैब, Soil Mechanics लैब।\n🔹 L&T, कंस्ट्रक्शन फर्म + सरकारी नौकरी (PWD, NHAI) में प्लेसमेंट।"]
+    },
+    {
+      "tag": "mba_program",
+      "patterns": ["mba", "mba program", "mba admission", "mba fees", "management course", "mba at jecrc"],
+      "responses": ["📈 **MBA Program:**\n🔹 Duration: 2 Years (4 Semesters)\n🔹 Specializations: Marketing, Finance, HR, IT.\n🔹 Eligibility: Graduation with 50% marks.\n🔹 Admission through RMAT / CAT / MAT scores.\n🔹 Fee: ~₹60,000 - ₹1,10,000 per year.\nAffiliated to RTU, AICTE approved."],
+      "responses_hi": ["📈 **MBA प्रोग्राम:**\n🔹 अवधि: 2 साल (4 सेमेस्टर)\n🔹 स्पेशलाइज़ेशन: Marketing, Finance, HR, IT।\n🔹 पात्रता: ग्रेजुएशन में 50% अंक।\n🔹 एडमिशन: RMAT / CAT / MAT स्कोर के आधार पर।\n🔹 फीस: ~₹60,000 - ₹1,10,000 प्रति वर्ष।\nRTU से संबद्ध, AICTE अनुमोदित।"]
+    },
+    {
+      "tag": "mca_program",
+      "patterns": ["mca", "mca program", "mca admission", "mca fees", "master of computer application", "mca at jecrc"],
+      "responses": ["💻 **MCA Program:**\n🔹 Duration: 2 Years (4 Semesters)\n🔹 Covers Advanced Programming, Cloud Computing, AI, Web Dev.\n🔹 Eligibility: BCA/B.Sc/Graduation with Mathematics.\n🔹 Fee: ~₹60,000 - ₹1,00,000 per year.\n🔹 Excellent placement support from T&P Cell."],
+      "responses_hi": ["💻 **MCA प्रोग्राम:**\n🔹 अवधि: 2 साल (4 सेमेस्टर)\n🔹 Advanced Programming, Cloud Computing, AI, Web Dev कवर होता है।\n🔹 पात्रता: BCA/B.Sc/ग्रेजुएशन गणित के साथ।\n🔹 फीस: ~₹60,000 - ₹1,00,000 प्रति वर्ष।\n🔹 T&P सेल से उत्कृष्ट प्लेसमेंट सपोर्ट।"]
+    },
+    {
+      "tag": "mtech_program",
+      "patterns": ["mtech", "m.tech", "mtech program", "mtech admission", "masters in engineering", "pg engineering"],
+      "responses": ["🎓 **M.Tech Program:**\n🔹 Duration: 2 Years\n🔹 Branches: CSE, ECE, EE, ME, CE, Structural Engg.\n🔹 Eligibility: B.Tech with 50% + Valid GATE score (preferred).\n🔹 GATE qualified students may get fee waiver.\nAffiliated to RTU, AICTE approved."],
+      "responses_hi": ["🎓 **M.Tech प्रोग्राम:**\n🔹 अवधि: 2 साल\n🔹 ब्रांच: CSE, ECE, EE, ME, CE, Structural Engg.\n🔹 पात्रता: B.Tech में 50% + वैध GATE स्कोर (प्राथमिकता)।\n🔹 GATE क्वालिफाइड छात्रों को फीस छूट मिल सकती है।\nRTU से संबद्ध, AICTE अनुमोदित।"]
+    },
+    {
+      "tag": "fee_structure",
+      "patterns": ["fee structure", "fees", "how much fee", "total fees", "tuition fee", "annual fee", "fees kitni hai", "btech fee", "mba fee"],
+      "responses": ["💰 **Fee Structure (Approximate):**\n🔹 **B.Tech (CSE/IT/AI):** ₹95,000 - ₹1,25,000 per year\n🔹 **B.Tech (ECE/EE/ME/CE):** ₹75,000 - ₹1,05,000 per year\n🔹 **MBA/MCA:** ₹60,000 - ₹1,10,000 per year\n🔹 **Hostel:** ₹45,000 - ₹75,000 per year\nContact Accounts at 0141-2770232 for exact current fees."],
+      "responses_hi": ["💰 **फीस स्ट्रक्चर (अनुमानित):**\n🔹 **B.Tech (CSE/IT/AI):** ₹95,000 - ₹1,25,000 प्रति वर्ष\n🔹 **B.Tech (ECE/EE/ME/CE):** ₹75,000 - ₹1,05,000 प्रति वर्ष\n🔹 **MBA/MCA:** ₹60,000 - ₹1,10,000 प्रति वर्ष\n🔹 **हॉस्टल:** ₹45,000 - ₹75,000 प्रति वर्ष\nसटीक फीस के लिए अकाउंट्स ऑफिस: 0141-2770232 पर संपर्क करें।"]
+    },
+    {
+      "tag": "fee_payment",
+      "patterns": ["how to pay fees", "fee payment method", "online fee payment", "fee kaise bhare", "installment", "emi", "fee portal"],
+      "responses": ["💳 **Fee Payment Methods:**\nYou can pay via College Fee Portal (Net Banking/Card), official UPI, NEFT/RTGS, or Demand Draft. Installment facility is available upon request at the Accounts office."],
+      "responses_hi": ["💳 **फीस भुगतान के तरीके:**\nआप कॉलेज फी पोर्टल (Net Banking/Card), ऑफिशियल UPI, NEFT/RTGS, या डिमांड ड्राफ्ट से भुगतान कर सकते हैं। किस्त (Installment) की सुविधा अकाउंट्स ऑफिस से अनुरोध पर उपलब्ध है।"]
+    },
+    {
+      "tag": "fee_refund",
+      "patterns": ["fee refund", "refund policy", "money back", "cancel admission", "fee wapas", "withdrawal refund"],
+      "responses": ["💰 **Fee Refund Policy:**\nAs per AICTE/RTU norms:\n🔹 Before classes start: Full refund (minus processing fee ~₹1,000)\n🔹 Within 15 days of classes: 80-90% refund\n🔹 After 15 days: As per RTU refund matrix.\n📞 Contact Accounts Office: 0141-2770232 for your specific case."],
+      "responses_hi": ["💰 **फीस रिफंड पॉलिसी:**\nAICTE/RTU नियमानुसार:\n🔹 कक्षा शुरू होने से पहले: पूरा रिफंड (प्रोसेसिंग फीस ~₹1,000 काटकर)\n🔹 कक्षा शुरू होने के 15 दिनों के भीतर: 80-90% रिफंड\n🔹 15 दिनों के बाद: RTU रिफंड मैट्रिक्स अनुसार।\n📞 अपने केस के लिए अकाउंट्स ऑफिस संपर्क करें: 0141-2770232"]
+    },
+    {
+      "tag": "fee_late_penalty",
+      "patterns": ["late fee", "fee penalty", "fee deadline missed", "fee late karne pe", "fee last date", "exam fee", "rtu exam fee", "registration fee"],
+      "responses": ["⚠️ **Fee Deadlines:**\n🔹 Semester fee due within 30 days of semester start.\n🔹 Late fee penalty: ₹100-500 per week.\n🔹 RTU Exam fee: ~₹1,500-2,500 per semester.\n🔹 Pay on time to avoid exam debarment!\n📞 Accounts Office: 0141-2770232"],
+      "responses_hi": ["⚠️ **फीस डेडलाइन:**\n🔹 सेमेस्टर फीस सेमेस्टर शुरू होने के 30 दिनों के अंदर जमा करनी होती है।\n🔹 लेट फीस पेनल्टी: ₹100-500 प्रति सप्ताह।\n🔹 RTU परीक्षा फीस: ~₹1,500-2,500 प्रति सेमेस्टर।\n🔹 परीक्षा से वंचित होने से बचने के लिए समय पर भुगतान करें!\n📞 अकाउंट्स ऑफिस: 0141-2770232"]
+    },
+    {
+      "tag": "fee_breakdown",
+      "patterns": ["fee includes what", "fee breakdown", "tuition vs hostel fee", "development fee", "lab fee", "caution money", "fee components", "hidden charges"],
+      "responses": ["💰 **Fee Breakdown (Typical):**\n🔹 Tuition Fee: Major component\n🔹 Development Fee: Campus maintenance\n🔹 Lab Fee: Equipment & consumables\n🔹 Exam Fee: RTU exam registration\n🔹 Caution Money: Refundable deposit (~₹5,000)\n🔹 Library & Activity Fee: Included\n⚠️ No hidden charges. Complete fee receipt provided.\n📞 Exact breakdown: Accounts Office 0141-2770232"],
+      "responses_hi": ["💰 **फीस ब्रेकडाउन (सामान्य):**\n🔹 ट्यूशन फीस: मुख्य हिस्सा\n🔹 डेवलपमेंट फीस: कैंपस रखरखाव\n🔹 लैब फीस: उपकरण और सामग्री\n🔹 परीक्षा फीस: RTU परीक्षा पंजीकरण\n🔹 कॉशन मनी: रिफंडेबल डिपॉज़िट (~₹5,000)\n🔹 लाइब्रेरी और एक्टिविटी फीस: शामिल\n⚠️ कोई छुपे हुए चार्ज नहीं। पूरी फीस रसीद दी जाती है।\n📞 सटीक ब्रेकडाउन: अकाउंट्स ऑफिस 0141-2770232"]
+    },
+    {
+      "tag": "education_loan",
+      "patterns": ["education loan", "bank loan", "loan for fees", "loan available", "loan kaise milega", "student loan", "fee loan", "which bank loan", "loan process"],
+      "responses": ["🏦 **Education Loan:**\n✅ JECRC has tie-ups with banks for easy education loans.\n🔹 SBI, PNB, Bank of Baroda, HDFC offer student loans.\n🔹 Loan covers tuition + hostel + books.\n🔹 Repayment starts after placement (moratorium period).\n📞 Contact Accounts Office: 0141-2770232"],
+      "responses_hi": ["🏦 **एजुकेशन लोन:**\n✅ JECRC का बैंकों से टाई-अप है आसान एजुकेशन लोन के लिए।\n🔹 SBI, PNB, Bank of Baroda, HDFC स्टूडेंट लोन देते हैं।\n🔹 लोन में ट्यूशन + हॉस्टल + किताबें कवर होती हैं।\n🔹 भुगतान प्लेसमेंट के बाद शुरू होता है (मोरेटोरियम पीरियड)।\n📞 अकाउंट्स ऑफिस: 0141-2770232"]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": ["scholarship", "scholarships available", "fee concession", "financial aid", "scholarship kaise milega", "sc st scholarship", "merit scholarship"],
+      "responses": ["🏆 **Scholarships:**\n✅ JECRC Merit Scholarship (Based on JEE/12th)\n✅ State Govt Scholarships (Mukhyamantri, SC/ST, OBC, EWS)\n✅ Sports Scholarship\nApply through the Scholarship Cell on campus!"],
+      "responses_hi": ["🏆 **छात्रवृत्तियाँ (Scholarships):**\n✅ JECRC मेरिट स्कॉलरशिप (JEE/12वीं के आधार पर)\n✅ राज्य सरकार की छात्रवृत्तियाँ (मुख्यमंत्री, SC/ST, OBC, EWS)\n✅ स्पोर्ट्स स्कॉलरशिप\nकैंपस में Scholarship Cell के माध्यम से अप्लाई करें!"]
+    },
+    {
+      "tag": "placement",
+      "patterns": ["placement", "placements", "campus placement", "placement record", "placement details", "highest package", "average package", "recruiters", "top companies"],
+      "responses": ["💼 **Placement Highlights:**\n🔹 **Rate:** 85%+ students placed\n🔹 **Highest Package:** ₹44 LPA+\n🔹 **Average Package:** ₹4.5 - ₹6.5 LPA\n🔹 **Top Recruiters:** Amazon, Microsoft, TCS, Infosys, Wipro, Accenture, Deloitte, L&T.\nOver 300+ companies visit every year!"],
+      "responses_hi": ["💼 **प्लेसमेंट हाइलाइट्स:**\n🔹 **दर:** 85%+ छात्र प्लेस होते हैं\n🔹 **सबसे ज़्यादा पैकेज:** ₹44 LPA+\n🔹 **औसत पैकेज:** ₹4.5 - ₹6.5 LPA\n🔹 **टॉप रिक्रूटर्स:** Amazon, Microsoft, TCS, Infosys, Wipro, Accenture, Deloitte, L&T।\nहर साल 300+ कंपनियां आती हैं!"]
+    },
+    {
+      "tag": "placement_training",
+      "patterns": ["placement training", "aptitude training", "soft skill", "how to prepare for placement", "coding practice", "tpo", "placement cell activities"],
+      "responses": ["📚 **Training & Placement Cell:**\nProvides Aptitude training, Coding classes (DSA, Java, Python), Soft skills, Mock Interviews, and Resume building starting from the 2nd year to make you industry-ready."],
+      "responses_hi": ["📚 **ट्रेनिंग एंड प्लेसमेंट सेल:**\n2nd Year से Aptitude ट्रेनिंग, कोडिंग क्लासेज (DSA, Java, Python), सॉफ्ट स्किल्स, मॉक इंटरव्यू और रिज़्यूमे बिल्डिंग की सुविधा देता है ताकि आप इंडस्ट्री-रेडी बनें।"]
+    },
+    {
+      "tag": "placement_statistics_detailed",
+      "patterns": ["placement stats", "placement data", "branch wise placement", "cse placement", "it placement", "ece placement", "mechanical placement"],
+      "responses": ["📊 **Branch-wise Placement:**\n🔹 CSE/IT: 85-90%+ placed (Avg ₹5-7 LPA)\n🔹 ECE: 75%+ placed (Avg ₹3.5-5 LPA)\n🔹 EE/ME/CE: 55-65%+ placed (Avg ₹3-4.5 LPA, Core + IT companies)\nAll branches get excellent IT company opportunities!"],
+      "responses_hi": ["📊 **ब्रांच-वार प्लेसमेंट:**\n🔹 CSE/IT: 85-90%+ प्लेस (औसत ₹5-7 LPA)\n🔹 ECE: 75%+ प्लेस (औसत ₹3.5-5 LPA)\n🔹 EE/ME/CE: 55-65%+ प्लेस (औसत ₹3-4.5 LPA, Core + IT कंपनियां)\nसभी ब्रांच को IT कंपनियों के शानदार अवसर मिलते हैं!"]
+    },
+    {
+      "tag": "placement_eligibility",
+      "patterns": ["placement eligibility", "backlog and placement", "cgpa for placement", "can i sit for placement", "placement criteria", "minimum cgpa placement", "kt and placement"],
+      "responses": ["📋 **Placement Eligibility:**\n🔹 No active backlog at time of placement.\n🔹 Minimum 60% or 6.0 CGPA (varies by company).\n🔹 Dream companies: Usually 7.0+ CGPA.\n⚠️ Clear backlogs ASAP for maximum opportunities!"],
+      "responses_hi": ["📋 **प्लेसमेंट पात्रता:**\n🔹 प्लेसमेंट के समय कोई एक्टिव बैकलॉग नहीं होना चाहिए।\n🔹 न्यूनतम 60% या 6.0 CGPA (कंपनी के अनुसार अलग)।\n🔹 ड्रीम कंपनियां: आमतौर पर 7.0+ CGPA।\n⚠️ ज़्यादा अवसरों के लिए बैकलॉग जल्द से जल्द क्लियर करें!"]
+    },
+    {
+      "tag": "placement_tiers",
+      "patterns": ["dream company", "superdream", "normal company", "mass recruiter", "tier 1 company", "top company placement", "lowest package", "minimum package"],
+      "responses": ["📊 **Placement Tiers:**\n🔹 **Super Dream:** ₹10 LPA+ (Amazon, Microsoft)\n🔹 **Dream:** ₹5-10 LPA (Deloitte, Accenture)\n🔹 **Normal:** ₹3-5 LPA (TCS, Infosys, Wipro)\n🔹 **Minimum:** ~₹2.5-3 LPA\nEvery eligible student gets multiple opportunities!"],
+      "responses_hi": ["📊 **प्लेसमेंट टियर्स:**\n🔹 **सुपर ड्रीम:** ₹10 LPA+ (Amazon, Microsoft)\n🔹 **ड्रीम:** ₹5-10 LPA (Deloitte, Accenture)\n🔹 **नॉर्मल:** ₹3-5 LPA (TCS, Infosys, Wipro)\n🔹 **न्यूनतम:** ~₹2.5-3 LPA\nहर पात्र छात्र को कई अवसर मिलते हैं!"]
+    },
+    {
+      "tag": "off_campus_placement",
+      "patterns": ["off campus", "off campus placement", "outside placement", "apply outside", "placement bond", "service bond", "can i apply other company"],
+      "responses": ["💼 **Off-Campus Placements:**\n✅ Allowed! No bond/restriction.\n🔹 Use LinkedIn, Naukri, Indeed for off-campus.\n🔹 T&P Cell shares off-campus opportunities too.\n🔹 Inform T&P Cell if placed off-campus for records."],
+      "responses_hi": ["💼 **ऑफ-कैंपस प्लेसमेंट:**\n✅ अनुमति है! कोई बॉन्ड/प्रतिबंध नहीं।\n🔹 LinkedIn, Naukri, Indeed का उपयोग करें ऑफ-कैंपस के लिए।\n🔹 T&P सेल भी ऑफ-कैंपस अवसर शेयर करता है।\n🔹 ऑफ-कैंपस प्लेस होने पर T&P सेल को सूचित करें।"]
+    },
+    {
+      "tag": "placement_process",
+      "patterns": ["placement process", "how placement works", "placement drive", "interview rounds", "selection process company", "aptitude test placement"],
+      "responses": ["💼 **Placement Process:**\n1️⃣ Company registers with T&P Cell.\n2️⃣ Pre-Placement Talk (PPT) - Company intro.\n3️⃣ Online Aptitude Test (Quant, Logical, Verbal).\n4️⃣ Technical Interview (DSA, Core subjects).\n5️⃣ HR Interview.\n6️⃣ Offer Letter!\n🔹 Entire process happens on campus. T&P Cell coordinates everything."],
+      "responses_hi": ["💼 **प्लेसमेंट प्रक्रिया:**\n1️⃣ कंपनी T&P सेल के साथ रजिस्टर करती है।\n2️⃣ प्री-प्लेसमेंट टॉक (PPT) - कंपनी परिचय।\n3️⃣ ऑनलाइन Aptitude टेस्ट (Quant, Logical, Verbal)।\n4️⃣ टेक्निकल इंटरव्यू (DSA, Core विषय)।\n5️⃣ HR इंटरव्यू।\n6️⃣ ऑफर लेटर!\n🔹 पूरी प्रक्रिया कैंपस में होती है। T&P सेल सब कुछ कोऑर्डिनेट करता है।"]
+    },
+    {
+      "tag": "resume_preparation",
+      "patterns": ["resume", "cv", "resume template", "how to make resume", "resume format", "resume for placement", "portfolio"],
+      "responses": ["📄 **Resume Preparation:**\n🔹 T&P Cell conducts Resume Building workshops.\n🔹 Include: Education, Skills, Projects, Internships, Achievements.\n🔹 Keep it 1 page (for freshers).\n🔹 Use clean format - avoid fancy designs.\n💡 Tip: Highlight projects and certifications over marks!\n🔹 Get it reviewed by T&P coordinator before placement season."],
+      "responses_hi": ["📄 **रिज़्यूमे तैयारी:**\n🔹 T&P सेल Resume Building वर्कशॉप आयोजित करता है।\n🔹 शामिल करें: शिक्षा, स्किल्स, प्रोजेक्ट्स, इंटर्नशिप, उपलब्धियां।\n🔹 1 पेज रखें (फ्रेशर्स के लिए)।\n🔹 साफ़ फॉर्मेट इस्तेमाल करें - फैंसी डिज़ाइन से बचें।\n💡 टिप: नंबरों से ज़्यादा प्रोजेक्ट्स और सर्टिफिकेशन हाइलाइट करें!\n🔹 प्लेसमेंट सीज़न से पहले T&P कोऑर्डिनेटर से रिव्यू करवाएं।"]
+    },
+    {
+      "tag": "internship",
+      "patterns": ["internship", "how to get internship", "summer internship", "industrial training", "internship opportunities", "training"],
+      "responses": ["💼 **Internships:**\nThe T&P Cell assists in securing summer internships (4-6 weeks) and final year industrial training with companies like TCS, Celebal Tech, and local startups. Start applying via Internshala/LinkedIn from 2nd year!"],
+      "responses_hi": ["💼 **इंटर्नशिप:**\nT&P सेल समर इंटर्नशिप (4-6 सप्ताह) और फाइनल ईयर इंडस्ट्रियल ट्रेनिंग दिलाने में मदद करता है। TCS, Celebal Tech और लोकल स्टार्टअप जैसी कंपनियों में। 2nd Year से Internshala/LinkedIn पर अप्लाई करना शुरू करें!"]
+    },
+    {
+      "tag": "hostel",
+      "patterns": ["hostel", "hostel facility", "hostel available", "hostel fees", "boys hostel", "girls hostel", "hostel kaise milega", "hostel room", "pg near jecrc"],
+      "responses": ["🏠 **Hostel Facilities:**\n🔹 Separate Boys & Girls Hostels on campus with 24x7 security & CCTV.\n🔹 **Fee:** ₹45,000 - ₹75,000/year (Double/Triple sharing).\n✅ Wi-Fi, RO Water, Gym, TV room, Laundry, and Medical facility available.\n📞 Contact Hostel Warden during admission."],
+      "responses_hi": ["🏠 **हॉस्टल सुविधाएं:**\n🔹 कैंपस में अलग Boys और Girls हॉस्टल, 24x7 सुरक्षा और CCTV के साथ।\n🔹 **फीस:** ₹45,000 - ₹75,000/साल (डबल/ट्रिपल शेयरिंग)।\n✅ Wi-Fi, RO पानी, जिम, TV रूम, लॉन्ड्री और मेडिकल सुविधा उपलब्ध।\n📞 एडमिशन के समय हॉस्टल वार्डन से संपर्क करें।"]
+    },
+    {
+      "tag": "hostel_room_types",
+      "patterns": ["single room hostel", "ac room", "non ac room", "triple sharing", "double sharing", "room type", "hostel room type", "ac hostel", "hostel amenities", "cooler in hostel"],
+      "responses": ["🏠 **Hostel Room Types:**\n🔹 **Double Sharing:** ₹60,000-75,000/year\n🔹 **Triple Sharing:** ₹45,000-55,000/year\n🔹 Single rooms: Limited availability (ask Warden).\n🔹 Rooms are Non-AC (Coolers provided in summer).\n✅ Each room: Bed, Study table, Chair, Fan, Cupboard.\n📞 Hostel Office: Contact during admission."],
+      "responses_hi": ["🏠 **हॉस्टल रूम के प्रकार:**\n🔹 **डबल शेयरिंग:** ₹60,000-75,000/साल\n🔹 **ट्रिपल शेयरिंग:** ₹45,000-55,000/साल\n🔹 सिंगल रूम: सीमित उपलब्धता (वार्डन से पूछें)।\n🔹 रूम Non-AC हैं (गर्मियों में कूलर दिया जाता है)।\n✅ हर रूम में: बेड, स्टडी टेबल, कुर्सी, पंखा, अलमारी।\n📞 हॉस्टल ऑफिस: एडमिशन के समय संपर्क करें।"]
+    },
+    {
+      "tag": "hostel_admission_process",
+      "patterns": ["how to get hostel", "hostel admission", "hostel apply", "hostel form", "hostel booking", "hostel allotment", "hostel registration", "hostel seat"],
+      "responses": ["🏠 **Hostel Admission:**\n1️⃣ Fill Hostel Application Form during college admission.\n2️⃣ Pay hostel fee at Accounts office.\n3️⃣ Room allotment by Hostel Warden.\n⚠️ Limited seats! Apply early.\n🔹 Priority: Outstation students > Local students."],
+      "responses_hi": ["🏠 **हॉस्टल एडमिशन:**\n1️⃣ कॉलेज एडमिशन के समय हॉस्टल एप्लीकेशन फॉर्म भरें।\n2️⃣ अकाउंट्स ऑफिस में हॉस्टल फीस जमा करें।\n3️⃣ हॉस्टल वार्डन द्वारा रूम अलॉट किया जाएगा।\n⚠️ सीटें सीमित हैं! जल्दी अप्लाई करें।\n🔹 प्राथमिकता: बाहर के छात्र > लोकल छात्र।"]
+    },
+    {
+      "tag": "hostel_visitor_policy",
+      "patterns": ["guest in hostel", "visitor allowed", "parents visit hostel", "friend stay hostel", "hostel guest room", "hostel mein cooking", "roommate change"],
+      "responses": ["📋 **Hostel Visitor Policy:**\n🔹 Parents can visit during 10 AM - 5 PM.\n🔹 No outsiders allowed overnight.\n❌ Cooking inside rooms is strictly prohibited.\n🔹 Roommate change: Request Warden (subject to availability).\n🔹 Use mess/canteen for all meals."],
+      "responses_hi": ["📋 **हॉस्टल विज़िटर नीति:**\n🔹 माता-पिता 10 AM - 5 PM के बीच मिल सकते हैं।\n🔹 रात में बाहरी व्यक्ति की अनुमति नहीं।\n❌ रूम में खाना बनाना सख्त मना है।\n🔹 रूममेट बदलना: वार्डन से अनुरोध करें (उपलब्धता अनुसार)।\n🔹 सभी भोजन के लिए मेस/कैंटीन का उपयोग करें।"]
+    },
+    {
+      "tag": "hostel_vacation_policy",
+      "patterns": ["hostel vacation", "hostel summer", "hostel closed", "hostel holiday", "stay during vacation", "hostel mein reh sakte vacation mein"],
+      "responses": ["📅 **Hostel During Vacations:**\n🔹 Hostel remains partially open during vacations.\n🔹 Students needing to stay must get prior written permission.\n🔹 Mess may operate with limited menu during holidays.\n🔹 Extra charges may apply for vacation stay.\n📞 Confirm with Hostel Warden before planning."],
+      "responses_hi": ["📅 **छुट्टियों में हॉस्टल:**\n🔹 छुट्टियों में हॉस्टल आंशिक रूप से खुला रहता है।\n🔹 रुकने वाले छात्रों को पहले से लिखित अनुमति लेनी होगी।\n🔹 छुट्टियों में मेस सीमित मेन्यू के साथ चल सकता है।\n🔹 वेकेशन स्टे के लिए अतिरिक्त शुल्क लग सकता है।\n📞 प्लानिंग से पहले हॉस्टल वार्डन से पुष्टि करें।"]
+    },
+    {
+      "tag": "mess_food",
+      "patterns": ["mess", "food", "canteen", "mess facility", "mess timing", "khana kaisa hai", "cafeteria", "lunch", "dinner", "breakfast"],
+      "responses": ["🍽️ **Mess & Canteen:**\n🔹 Mess serves 4 meals daily (Breakfast, Lunch, Evening Snacks, Dinner).\n🔹 Both Veg & Non-Veg options available.\n🔹 Campus Canteen serves fast food, beverages, and meals at affordable prices till 6:00 PM."],
+      "responses_hi": ["🍽️ **मेस और कैंटीन:**\n🔹 मेस में रोज़ाना 4 बार खाना मिलता है (नाश्ता, दोपहर का खाना, शाम का नाश्ता, रात का खाना)।\n🔹 वेज और नॉन-वेज दोनों विकल्प उपलब्ध।\n🔹 कैंपस कैंटीन में शाम 6:00 बजे तक किफायती दामों पर फास्ट फूड, पेय और भोजन मिलता है।"]
+    },
+    {
+      "tag": "hostel_rules",
+      "patterns": ["hostel rules", "hostel timing", "night curfew", "hostel discipline", "hostel outing", "hostel leave", "hostel gate timing"],
+      "responses": ["📋 **Hostel Rules:**\n✅ Night curfew is strictly followed (9 PM for boys, 7:30 PM for girls).\n✅ Prior permission required for night-outs or going home.\n❌ Alcohol, smoking, and ragging are strictly prohibited and lead to expulsion."],
+      "responses_hi": ["📋 **हॉस्टल नियम:**\n✅ नाइट कर्फ्यू सख्ती से पालन किया जाता है (लड़कों के लिए रात 9 बजे, लड़कियों के लिए 7:30 बजे)।\n✅ नाइट-आउट या घर जाने के लिए पहले से अनुमति ज़रूरी।\n❌ शराब, धूम्रपान और रैगिंग सख्त वर्जित है - निष्कासन हो सकता है।"]
+    },
+    {
+      "tag": "exam_schedule",
+      "patterns": ["exam schedule", "exam date", "when are exams", "exam timetable", "semester exam", "mid term exam", "exam kab hai", "rtu exam"],
+      "responses": ["📝 **Exams:**\n🔹 **Mid-Terms (Internal):** Usually in Oct (Odd sem) and March (Even sem).\n🔹 **End-Semesters (RTU):** Usually in Dec-Jan (Odd) and May-June (Even).\nCheck the RTU academic calendar and department notice boards for exact dates."],
+      "responses_hi": ["📝 **परीक्षाएं:**\n🔹 **मिड-टर्म (Internal):** आमतौर पर अक्टूबर (Odd सेम) और मार्च (Even सेम) में।\n🔹 **एंड-सेमेस्टर (RTU):** आमतौर पर दिसंबर-जनवरी (Odd) और मई-जून (Even) में।\nसटीक तारीखों के लिए RTU एकेडमिक कैलेंडर और डिपार्टमेंट नोटिस बोर्ड देखें।"]
+    },
+    {
+      "tag": "syllabus",
+      "patterns": ["syllabus", "course syllabus", "subjects", "what subjects", "syllabus download", "curriculum", "rtu syllabus"],
+      "responses": ["📚 **Syllabus:**\nJECRC follows the RTU (Rajasthan Technical University) syllabus. You can download the latest syllabus from the official RTU website (rtu.ac.in) or ask your department coordinator."],
+      "responses_hi": ["📚 **सिलेबस:**\nJECRC, RTU (राजस्थान टेक्निकल यूनिवर्सिटी) का सिलेबस फॉलो करता है। लेटेस्ट सिलेबस RTU की ऑफिशियल वेबसाइट (rtu.ac.in) से डाउनलोड करें या अपने डिपार्टमेंट कोऑर्डिनेटर से पूछें।"]
+    },
+    {
+      "tag": "timetable",
+      "patterns": ["timetable", "class schedule", "class timing", "lecture timing", "schedule", "class kab lagti hai", "college timing", "college time"],
+      "responses": ["🕐 **College Timings:**\n🔹 Monday to Friday: 9:00 AM - 4:30 PM\n🔹 Saturday: 9:00 AM - 1:30 PM\nYour specific class timetable will be shared by your Class Representative (CR) or on the department notice board."],
+      "responses_hi": ["🕐 **कॉलेज टाइमिंग:**\n🔹 सोमवार से शुक्रवार: सुबह 9:00 - शाम 4:30\n🔹 शनिवार: सुबह 9:00 - दोपहर 1:30\nआपका स्पेसिफिक क्लास टाइमटेबल आपके क्लास रिप्रेज़ेंटेटिव (CR) या डिपार्टमेंट नोटिस बोर्ड पर शेयर किया जाएगा।"]
+    },
+    {
+      "tag": "attendance",
+      "patterns": ["attendance", "attendance rules", "minimum attendance", "attendance policy", "75 percent", "absent", "detained", "attendance shortage"],
+      "responses": ["📊 **Attendance Policy:**\n⚠️ **75% minimum attendance** is strictly mandatory as per RTU rules!\nIf attendance falls below 65%, you may be detained from end-semester exams. Medical leaves require a valid certificate within 3 days."],
+      "responses_hi": ["📊 **उपस्थिति नीति:**\n⚠️ RTU नियमों के अनुसार **न्यूनतम 75% उपस्थिति** सख्ती से अनिवार्य है!\nअगर उपस्थिति 65% से नीचे गिरती है, तो एंड-सेमेस्टर परीक्षा से वंचित किया जा सकता है। मेडिकल लीव के लिए 3 दिनों के अंदर वैध सर्टिफिकेट देना ज़रूरी है।"]
+    },
+    {
+      "tag": "result",
+      "patterns": ["result", "results", "exam result", "result kab aayega", "marksheet", "cgpa", "sgpa", "passing marks", "rtu result"],
+      "responses": ["📊 **Results:**\nEnd-semester results are declared by RTU online at rtu.ac.in. Grading is on a 10-point CGPA scale. You need a minimum of 40% in each subject to pass."],
+      "responses_hi": ["📊 **रिज़ल्ट:**\nएंड-सेमेस्टर रिज़ल्ट RTU द्वारा ऑनलाइन rtu.ac.in पर घोषित किए जाते हैं। ग्रेडिंग 10-पॉइंट CGPA स्केल पर होती है। पास होने के लिए हर सब्जेक्ट में न्यूनतम 40% ज़रूरी है।"]
+    },
+    {
+      "tag": "backlog_kt",
+      "patterns": ["backlog", "back paper", "kt", "supplementary exam", "fail ho gaya", "back lagi", "reappear", "how to clear backlog"],
+      "responses": ["📝 **Backlogs/Supplementary:**\nIf you fail a subject, you can fill the supplementary exam form through the college exam cell (Fee ~₹500-1000). Exams are conducted in the next RTU exam cycle."],
+      "responses_hi": ["📝 **बैकलॉग/सप्लीमेंट्री:**\nअगर किसी सब्जेक्ट में फेल हो जाते हैं, तो कॉलेज एग्ज़ाम सेल से सप्लीमेंट्री परीक्षा फॉर्म भर सकते हैं (फीस ~₹500-1000)। परीक्षा अगले RTU एग्ज़ाम साइकल में होती है।"]
+    },
+    {
+      "tag": "examination_rules",
+      "patterns": ["exam rules", "cheating", "malpractice", "exam hall rules", "copy karne pe kya hoga", "exam misconduct"],
+      "responses": ["🚫 **Exam Rules:**\nStrict anti-cheating policy! Mobile phones, smartwatches, and chits are completely banned. Catching involved in malpractice leads to exam cancellation and possible debarment by RTU."],
+      "responses_hi": ["🚫 **परीक्षा नियम:**\nनकल के खिलाफ सख्त नीति! मोबाइल फोन, स्मार्टवॉच और चिट पूरी तरह प्रतिबंधित हैं। नकल करते पकड़े जाने पर परीक्षा रद्द और RTU द्वारा डिबार भी किया जा सकता है।"]
+    },
+    {
+      "tag": "credit_system",
+      "patterns": ["credit system", "credits", "how many credits", "credit hours", "total credits btech", "credit kya hota hai", "credit meaning"],
+      "responses": ["📊 **Credit System:**\n🔹 Each subject has 3-5 credits (Lecture+Tutorial+Practical hours).\n🔹 Total B.Tech credits: ~180-200 across 8 semesters.\n🔹 CGPA = Weighted average of (Grade × Credits).\n🔹 Minimum passing grade: 4.0 out of 10.0\n🔹 Credits determine workload per subject."],
+      "responses_hi": ["📊 **क्रेडिट सिस्टम:**\n🔹 हर सब्जेक्ट में 3-5 क्रेडिट होते हैं (लेक्चर+ट्यूटोरियल+प्रैक्टिकल घंटे)।\n🔹 कुल B.Tech क्रेडिट: ~180-200 (8 सेमेस्टर में)।\n🔹 CGPA = (ग्रेड × क्रेडिट) का वेटेड एवरेज।\n🔹 न्यूनतम पासिंग ग्रेड: 10.0 में से 4.0\n🔹 क्रेडिट हर सब्जेक्ट का वर्कलोड तय करते हैं।"]
+    },
+    {
+      "tag": "elective_subjects",
+      "patterns": ["elective", "elective subjects", "open elective", "department elective", "subject choice", "choose subject", "optional subjects"],
+      "responses": ["📚 **Elective Subjects:**\n🔹 **Department Electives:** From your branch (5th-8th sem).\n🔹 **Open Electives:** From ANY department.\n🔹 Popular: AI/ML, IoT, Cloud Computing, Digital Marketing.\n🔹 List shared by HOD before semester registration."],
+      "responses_hi": ["📚 **इलेक्टिव सब्जेक्ट:**\n🔹 **डिपार्टमेंट इलेक्टिव:** आपकी ब्रांच से (5वें-8वें सेम)।\n🔹 **ओपन इलेक्टिव:** किसी भी डिपार्टमेंट से।\n🔹 लोकप्रिय: AI/ML, IoT, Cloud Computing, Digital Marketing।\n🔹 सेमेस्टर रजिस्ट्रेशन से पहले HOD द्वारा लिस्ट शेयर की जाती है।"]
+    },
+    {
+      "tag": "final_year_project",
+      "patterns": ["final year project", "project", "fyp", "btech project", "capstone project", "project guide", "project topic", "major project", "minor project"],
+      "responses": ["🔬 **Projects:**\n🔹 **Minor Project:** 6th semester (Team of 2-3).\n🔹 **Major Project:** 7th-8th semester (Capstone).\n🔹 Faculty Guide assigned to each team.\n🔹 Topics: Industry-sponsored, Research-based, or Self-proposed.\n🔹 J-TECHTRIX is the annual project showcase!"],
+      "responses_hi": ["🔬 **प्रोजेक्ट:**\n🔹 **माइनर प्रोजेक्ट:** 6वां सेमेस्टर (2-3 की टीम)।\n🔹 **मेजर प्रोजेक्ट:** 7वां-8वां सेमेस्टर (कैपस्टोन)।\n🔹 हर टीम को फैकल्टी गाइड दिया जाता है।\n🔹 टॉपिक: इंडस्ट्री-स्पॉन्सर्ड, रिसर्च-बेस्ड, या खुद प्रस्तावित।\n🔹 J-TECHTRIX वार्षिक प्रोजेक्ट शोकेस है!"]
+    },
+    {
+      "tag": "internal_marks",
+      "patterns": ["internal marks", "internal assessment", "assignment marks", "class test", "mid term marks", "practical marks", "marks distribution", "grading system", "grace marks"],
+      "responses": ["📊 **Marks Distribution (RTU):**\n🔹 **Theory:** Internal (30%) + External RTU Exam (70%)\n🔹 **Internal:** Mid-sem + Assignments + Attendance.\n🔹 **Practical:** Internal lab (60%) + External viva (40%).\n🔹 **Passing:** Min 40% in each component.\n🔹 Grace marks: 1-2% as per RTU discretion."],
+      "responses_hi": ["📊 **अंक वितरण (RTU):**\n🔹 **थ्योरी:** इंटरनल (30%) + एक्सटर्नल RTU परीक्षा (70%)\n🔹 **इंटरनल:** मिड-सेम + असाइनमेंट + उपस्थिति।\n🔹 **प्रैक्टिकल:** इंटरनल लैब (60%) + एक्सटर्नल वाइवा (40%)।\n🔹 **पासिंग:** हर कंपोनेंट में न्यूनतम 40%।\n🔹 ग्रेस मार्क्स: RTU के विवेक पर 1-2%।"]
+    },
+    {
+      "tag": "re_evaluation",
+      "patterns": ["re evaluation", "recheck paper", "rechecking", "marks wrong", "re evaluation form", "challenge result", "paper recheck", "scrutiny"],
+      "responses": ["📝 **Re-evaluation:**\n🔹 Apply within 15 days of result.\n🔹 Fee: ₹500-1,000 per subject.\n🔹 Apply through Exam Cell → RTU.\n🔹 Result updated in 30-45 days.\n⚠️ Marks can increase OR decrease!"],
+      "responses_hi": ["📝 **पुनर्मूल्यांकन (Re-evaluation):**\n🔹 रिज़ल्ट के 15 दिनों के अंदर अप्लाई करें।\n🔹 फीस: ₹500-1,000 प्रति सब्जेक्ट।\n🔹 एग्ज़ाम सेल → RTU के माध्यम से अप्लाई करें।\n🔹 रिज़ल्ट 30-45 दिनों में अपडेट होता है।\n⚠️ अंक बढ़ भी सकते हैं और घट भी सकते हैं!"]
+    },
+    {
+      "tag": "letter_of_recommendation",
+      "patterns": ["lor", "letter of recommendation", "recommendation letter", "professor recommendation", "faculty reference", "reference letter"],
+      "responses": ["📄 **Letter of Recommendation (LOR):**\n🔹 Request HOD, Project Guide, or any faculty.\n🔹 Give 1-2 weeks advance notice.\n🔹 Provide resume and purpose (MS/Job).\n🔹 Dean Academics can provide official college LOR."],
+      "responses_hi": ["📄 **सिफारिश पत्र (LOR):**\n🔹 HOD, प्रोजेक्ट गाइड, या किसी फैकल्टी से अनुरोध करें।\n🔹 1-2 सप्ताह पहले बताएं।\n🔹 रिज़्यूमे और उद्देश्य (MS/Job) बताएं।\n🔹 डीन एकेडमिक्स आधिकारिक कॉलेज LOR दे सकते हैं।"]
+    },
+    {
+      "tag": "year_back_detention",
+      "patterns": ["year back", "detained", "year loss", "fail year", "repeat year", "rusticate", "year back rules", "detained from exam"],
+      "responses": ["⚠️ **Year Back / Detention:**\n🔹 If attendance < 65%: Detained from end-sem exams.\n🔹 If multiple backlogs pending: May need to repeat semester.\n🔹 Year back = Extra year to clear remaining subjects.\n🔹 Max duration: B.Tech must complete within 7 years.\n💡 Maintain attendance & clear exams on time!"],
+      "responses_hi": ["⚠️ **ईयर बैक / डिटेंशन:**\n🔹 उपस्थिति < 65%: एंड-सेम परीक्षा से वंचित।\n🔹 कई बैकलॉग पेंडिंग: सेमेस्टर दोहराना पड़ सकता है।\n🔹 ईयर बैक = बचे सब्जेक्ट क्लियर करने के लिए एक्स्ट्रा साल।\n🔹 अधिकतम अवधि: B.Tech 7 साल में पूरा करना ज़रूरी।\n💡 उपस्थिति बनाए रखें और समय पर परीक्षा क्लियर करें!"]
+    },
+    {
+      "tag": "practical_viva",
+      "patterns": ["practical exam", "viva", "viva voce", "lab exam", "external viva", "practical marks", "lab external"],
+      "responses": ["🔬 **Practical / Viva Exams:**\n🔹 Held at end of each semester for lab subjects.\n🔹 External examiner from other college evaluates.\n🔹 Marks: Internal (60%) + External Viva (40%).\n🔹 Prepare lab files, experiments, and viva questions.\n💡 Keep lab records updated throughout the semester!"],
+      "responses_hi": ["🔬 **प्रैक्टिकल / वाइवा परीक्षा:**\n🔹 हर सेमेस्टर के अंत में लैब सब्जेक्ट के लिए आयोजित।\n🔹 दूसरे कॉलेज से एक्सटर्नल एग्ज़ामिनर मूल्यांकन करता है।\n🔹 अंक: इंटरनल (60%) + एक्सटर्नल वाइवा (40%)।\n🔹 लैब फाइल, प्रयोग और वाइवा प्रश्न तैयार करें।\n💡 पूरे सेमेस्टर लैब रिकॉर्ड अपडेट रखें!"]
+    },
+    {
+      "tag": "academic_calendar",
+      "patterns": ["academic calendar", "semester dates", "when semester starts", "college opening date", "session start", "new session kab se", "orientation"],
+      "responses": ["📅 **Academic Calendar:**\n🔹 **Odd Semester:** August - December\n🔹 **Even Semester:** January - May\n🔹 **Orientation (1st years):** Usually 1st week of August.\n🔹 Detailed calendar shared on college website & notice boards.\n🔹 Includes exam dates, holidays, PTM, and fest dates."],
+      "responses_hi": ["📅 **एकेडमिक कैलेंडर:**\n🔹 **ऑड सेमेस्टर:** अगस्त - दिसंबर\n🔹 **ईवन सेमेस्टर:** जनवरी - मई\n🔹 **ओरिएंटेशन (1st Year):** आमतौर पर अगस्त का पहला सप्ताह।\n🔹 विस्तृत कैलेंडर कॉलेज वेबसाइट और नोटिस बोर्ड पर शेयर किया जाता है।\n🔹 इसमें परीक्षा तिथियां, छुट्टियां, PTM और फेस्ट डेट्स शामिल हैं।"]
+    },
+    {
+      "tag": "semester_system",
+      "patterns": ["semester system", "how many semesters", "odd semester", "even semester", "academic calendar"],
+      "responses": ["📅 **Semesters:**\nB.Tech is 8 semesters (4 years). Odd semesters run from Aug-Dec, Even semesters from Jan-May. Exams happen at the end of each semester."],
+      "responses_hi": ["📅 **सेमेस्टर:**\nB.Tech 8 सेमेस्टर (4 साल) का है। ऑड सेमेस्टर अगस्त-दिसंबर और ईवन सेमेस्टर जनवरी-मई तक चलता है। हर सेमेस्टर के अंत में परीक्षा होती है।"]
+    },
+    {
+      "tag": "transfer_migration",
+      "patterns": ["transfer", "migration", "branch change", "college transfer", "migration certificate", "transfer certificate"],
+      "responses": ["📋 **Transfer / Migration:**\n🔹 **Branch Change:** Possible after 1st year based on CGPA & seat availability. Apply to Dean Academics.\n🔹 **College Transfer:** Through RTU lateral transfer process (very limited seats).\n🔹 **Migration Certificate:** Issued by RTU after degree completion. Apply through college exam cell."],
+      "responses_hi": ["📋 **ट्रांसफर / माइग्रेशन:**\n🔹 **ब्रांच चेंज:** 1st Year के बाद CGPA और सीट उपलब्धता के आधार पर संभव। डीन एकेडमिक्स को अप्लाई करें।\n🔹 **कॉलेज ट्रांसफर:** RTU लेटरल ट्रांसफर प्रक्रिया से (बहुत सीमित सीटें)।\n🔹 **माइग्रेशन सर्टिफिकेट:** डिग्री पूरी होने के बाद RTU द्वारा जारी। कॉलेज एग्ज़ाम सेल से अप्लाई करें।"]
+    },
+    {
+      "tag": "semester_registration",
+      "patterns": ["semester registration", "course registration", "subject registration", "how to register semester", "enrollment", "re registration"],
+      "responses": ["📝 **Semester Registration:**\n🔹 Done at start of each semester via ERP portal.\n🔹 Pay semester fee first → Registration activates.\n🔹 Select elective subjects (from 5th sem onwards).\n🔹 Deadline: Usually within 2 weeks of semester start.\n⚠️ Late registration attracts penalty. Don't miss the deadline!"],
+      "responses_hi": ["📝 **सेमेस्टर रजिस्ट्रेशन:**\n🔹 हर सेमेस्टर की शुरुआत में ERP पोर्टल से किया जाता है।\n🔹 पहले सेमेस्टर फीस जमा करें → रजिस्ट्रेशन एक्टिवेट होगा।\n🔹 इलेक्टिव सब्जेक्ट चुनें (5वें सेम से)।\n🔹 डेडलाइन: आमतौर पर सेमेस्टर शुरू होने के 2 सप्ताह के अंदर।\n⚠️ लेट रजिस्ट्रेशन पर पेनल्टी लगती है। डेडलाइन मिस न करें!"]
+    },
+    {
+      "tag": "library",
+      "patterns": ["library", "library timing", "books", "e-library", "digital library", "reading room", "book issue", "library rules"],
+      "responses": ["📚 **Central Library:**\n🔹 Open: 8:00 AM - 8:00 PM (Mon-Sat)\n🔹 50,000+ books, IEEE e-journals, DELNET.\n🔹 Issue up to 3 books for 14 days using your College ID. Late fine is ₹2 per day."],
+      "responses_hi": ["📚 **सेंट्रल लाइब्रेरी:**\n🔹 खुलने का समय: सुबह 8:00 - रात 8:00 (सोम-शनि)\n🔹 50,000+ किताबें, IEEE ई-जर्नल, DELNET।\n🔹 कॉलेज ID से 14 दिनों के लिए 3 किताबें इश्यू कर सकते हैं। लेट फाइन ₹2 प्रति दिन।"]
+    },
+    {
+      "tag": "lab_facilities",
+      "patterns": ["lab", "laboratory", "computer lab", "workshop", "practical lab", "lab equipment", "software lab"],
+      "responses": ["🔬 **Labs & Workshops:**\nHighly equipped labs including AI/ML Lab, Cyber Security Lab, CNC Machines, VLSI Lab, and high-speed internet computer labs with licensed software like AutoCAD, MATLAB, etc."],
+      "responses_hi": ["🔬 **लैब और वर्कशॉप:**\nAI/ML लैब, Cyber Security लैब, CNC मशीन, VLSI लैब, और हाई-स्पीड इंटरनेट वाली कंप्यूटर लैब जैसी उच्च सुसज्जित लैब, AutoCAD, MATLAB जैसे लाइसेंस्ड सॉफ्टवेयर के साथ।"]
+    },
+    {
+      "tag": "sports",
+      "patterns": ["sports", "playground", "gym", "games", "cricket ground", "basketball", "sports events", "football", "sports club"],
+      "responses": ["🏅 **Sports Facilities:**\n✅ Cricket, Football, Basketball, Volleyball courts.\n✅ Indoor Badminton, Table Tennis, Chess.\n✅ Modern Gymnasium.\nCollege hosts an Annual Sports Fest and participates in RTU tournaments!"],
+      "responses_hi": ["🏅 **खेल सुविधाएं:**\n✅ क्रिकेट, फुटबॉल, बास्केटबॉल, वॉलीबॉल कोर्ट।\n✅ इनडोर बैडमिंटन, टेबल टेनिस, शतरंज।\n✅ आधुनिक जिम।\nकॉलेज वार्षिक स्पोर्ट्स फेस्ट आयोजित करता है और RTU टूर्नामेंट में भाग लेता है!"]
+    },
+    {
+      "tag": "wifi",
+      "patterns": ["wifi", "wi-fi", "internet", "wifi password", "free wifi", "campus wifi", "net speed"],
+      "responses": ["📶 **Campus Wi-Fi:**\nHigh-speed Wi-Fi is available across academic blocks, library, and hostels. Login using your student ID credentials provided by the IT admin."],
+      "responses_hi": ["📶 **कैंपस Wi-Fi:**\nएकेडमिक ब्लॉक, लाइब्रेरी और हॉस्टल में हाई-स्पीड Wi-Fi उपलब्ध है। IT एडमिन द्वारा दिए गए स्टूडेंट ID क्रेडेंशियल से लॉगिन करें।"]
+    },
+    {
+      "tag": "transport",
+      "patterns": ["transport", "bus", "college bus", "bus route", "bus timing", "bus facility", "bus fee", "how to reach college"],
+      "responses": ["🚌 **Transport / Bus Facility:**\nCollege buses cover almost all major routes in Jaipur (Mansarovar, Malviya Nagar, Vaishali, Jagatpura, etc.).\n🔹 Fee: ₹15,000 - ₹30,000/year.\n🔹 Pickup: ~7:15 AM, Drop: ~4:30 PM."],
+      "responses_hi": ["🚌 **ट्रांसपोर्ट / बस सुविधा:**\nकॉलेज बसें जयपुर के लगभग सभी प्रमुख रूट कवर करती हैं (मानसरोवर, मालवीय नगर, वैशाली, जगतपुरा आदि)।\n🔹 फीस: ₹15,000 - ₹30,000/साल।\n🔹 पिकअप: ~सुबह 7:15, ड्रॉप: ~शाम 4:30।"]
+    },
+    {
+      "tag": "parking",
+      "patterns": ["parking", "vehicle parking", "bike parking", "car parking", "two wheeler parking"],
+      "responses": ["🅿️ **Parking Facility:**\nDedicated parking zones for:\n🔹 Two-wheelers (Bikes/Scooters) - Near main gate.\n🔹 Four-wheelers - Separate car parking area.\n🔹 Bus parking area for college transport.\n⚠️ Always lock your vehicle. College is not responsible for theft."],
+      "responses_hi": ["🅿️ **पार्किंग सुविधा:**\nसमर्पित पार्किंग ज़ोन:\n🔹 दोपहिया (बाइक/स्कूटर) - मुख्य गेट के पास।\n🔹 चारपहिया - अलग कार पार्किंग एरिया।\n🔹 कॉलेज ट्रांसपोर्ट के लिए बस पार्किंग।\n⚠️ हमेशा वाहन लॉक करें। चोरी के लिए कॉलेज ज़िम्मेदार नहीं है।"]
+    },
+    {
+      "tag": "auditorium_seminar",
+      "patterns": ["auditorium", "seminar hall", "conference room", "event hall", "lecture hall"],
+      "responses": ["🎭 **Auditorium & Seminar Halls:**\n🔹 Main Auditorium: 1000+ seating capacity (AC, Projector, Sound system).\n🔹 Multiple Seminar Halls (100-200 capacity) for workshops & guest lectures.\n🔹 Open-Air Theatre for cultural events.\nUsed for placement drives, tech talks, and college fests!"],
+      "responses_hi": ["🎭 **ऑडिटोरियम और सेमिनार हॉल:**\n🔹 मुख्य ऑडिटोरियम: 1000+ बैठने की क्षमता (AC, प्रोजेक्टर, साउंड सिस्टम)।\n🔹 कई सेमिनार हॉल (100-200 क्षमता) वर्कशॉप और गेस्ट लेक्चर के लिए।\n🔹 सांस्कृतिक कार्यक्रमों के लिए ओपन-एयर थिएटर।\nप्लेसमेंट ड्राइव, टेक टॉक और कॉलेज फेस्ट के लिए इस्तेमाल होता है!"]
+    },
+    {
+      "tag": "campus_life",
+      "patterns": ["campus life", "college life", "campus", "how is campus", "infrastructure", "campus environment", "green campus"],
+      "responses": ["🌟 **Campus Life:**\nJECRC boasts a vibrant, green 20-acre campus with smart classrooms, AC library, auditoriums, cafeterias, sports grounds, and 15+ active student clubs! Life here is a perfect mix of study and fun."],
+      "responses_hi": ["🌟 **कैंपस लाइफ:**\nJECRC का 20 एकड़ का हरा-भरा कैंपस स्मार्ट क्लासरूम, AC लाइब्रेरी, ऑडिटोरियम, कैफेटेरिया, स्पोर्ट्स ग्राउंड और 15+ एक्टिव स्टूडेंट क्लब से भरपूर है! यहाँ की ज़िंदगी पढ़ाई और मज़े का परफेक्ट मिक्स है।"]
+    },
+    {
+      "tag": "campus_navigation",
+      "patterns": ["how to reach", "campus map", "location", "address", "directions to jecrc", "google maps", "where is jecrc"],
+      "responses": ["📍 **How to Reach JECRC Foundation:**\n🔹 **Address:** JECRC Campus, Ramchandrapura, Sitapura Industrial Area, Jaipur - 303905\n🔹 **From Jaipur Railway Station:** ~18 km (40 min by cab)\n🔹 **From Airport:** ~12 km (25 min)\n🔹 **Nearest Bus Stop:** Sitapura Industrial Area\n📌 Google Maps: Search 'JECRC Foundation Jaipur'\n🚌 College buses also cover all major Jaipur routes."],
+      "responses_hi": ["📍 **JECRC Foundation कैसे पहुंचें:**\n🔹 **पता:** JECRC कैंपस, रामचंद्रपुरा, सीतापुरा इंडस्ट्रियल एरिया, जयपुर - 303905\n🔹 **जयपुर रेलवे स्टेशन से:** ~18 km (कैब से 40 मिनट)\n🔹 **एयरपोर्ट से:** ~12 km (25 मिनट)\n🔹 **नज़दीकी बस स्टॉप:** सीतापुरा इंडस्ट्रियल एरिया\n📌 Google Maps: 'JECRC Foundation Jaipur' सर्च करें\n🚌 कॉलेज बसें भी जयपुर के सभी प्रमुख रूट कवर करती हैं।"]
+    },
+    {
+      "tag": "campus_facilities_misc",
+      "patterns": ["xerox", "photocopy", "printing", "stationary", "stationary shop", "lost and found", "lost id card", "locker", "power backup", "generator", "water cooler", "drinking water", "ro water"],
+      "responses": ["🏫 **Campus Facilities:**\n🔹 Xerox/Printing: Near library and canteen.\n🔹 Stationery Shop: On campus.\n🔹 Lost & Found: Security Office.\n🔹 RO Water: Every floor of each block.\n🔹 Power Backup: Full generator for labs & classrooms.\n🔹 Lockers: In hostel rooms (bring your own lock)."],
+      "responses_hi": ["🏫 **कैंपस सुविधाएं:**\n🔹 ज़ेरॉक्स/प्रिंटिंग: लाइब्रेरी और कैंटीन के पास।\n🔹 स्टेशनरी शॉप: कैंपस में।\n🔹 लॉस्ट एंड फाउंड: सिक्योरिटी ऑफिस।\n🔹 RO पानी: हर ब्लॉक की हर मंज़िल पर।\n🔹 पावर बैकअप: लैब और क्लासरूम के लिए पूरा जनरेटर।\n🔹 लॉकर: हॉस्टल रूम में (अपना ताला लाएं)।"]
+    },
+    {
+      "tag": "campus_safety",
+      "patterns": ["is campus safe", "safety", "security", "cctv", "guard", "campus security", "safe for girls", "girls safety hostel", "night safety", "college genuine", "is jecrc safe"],
+      "responses": ["🔒 **Campus Safety:**\n✅ 24x7 Security guards at all gates.\n✅ CCTV across entire campus & hostels.\n✅ Separate Girls Hostel with female wardens.\n✅ Anti-Ragging Squad & Women's Cell active.\n✅ Well-lit campus + emergency helpline.\n🔹 JECRC is AICTE approved, NAAC accredited - 100% genuine!"],
+      "responses_hi": ["🔒 **कैंपस सुरक्षा:**\n✅ सभी गेट पर 24x7 सुरक्षा गार्ड।\n✅ पूरे कैंपस और हॉस्टल में CCTV।\n✅ महिला वार्डन के साथ अलग गर्ल्स हॉस्टल।\n✅ एंटी-रैगिंग स्क्वाड और विमेन सेल सक्रिय।\n✅ अच्छी रोशनी वाला कैंपस + इमरजेंसी हेल्पलाइन।\n🔹 JECRC AICTE अनुमोदित, NAAC मान्यता प्राप्त - 100% जेन्यूइन!"]
+    },
+    {
+      "tag": "student_login_erp",
+      "patterns": ["student portal", "student login", "erp", "erp login", "online portal", "student erp", "attendance portal"],
+      "responses": ["🖥️ **Student ERP Portal:**\nAccess your attendance, marks, fee receipts, and notices online.\n🔹 URL: Available on college website → Student Login section.\n🔹 Login with your Enrollment Number & Password.\n🔹 For login issues, contact the IT Helpdesk or your Class Coordinator.\n📧 IT Support: it@jecrcfoundation.com"],
+      "responses_hi": ["🖥️ **स्टूडेंट ERP पोर्टल:**\nअपनी उपस्थिति, अंक, फीस रसीद और नोटिस ऑनलाइन देखें।\n🔹 URL: कॉलेज वेबसाइट → Student Login सेक्शन में उपलब्ध।\n🔹 अपने एनरोलमेंट नंबर और पासवर्ड से लॉगिन करें।\n🔹 लॉगिन समस्या के लिए IT हेल्पडेस्क या क्लास कोऑर्डिनेटर से संपर्क करें।\n📧 IT सपोर्ट: it@jecrcfoundation.com"]
+    },
+    {
+      "tag": "environment_green",
+      "patterns": ["green campus", "environment", "eco friendly", "plantation", "solar", "sustainability"],
+      "responses": ["🌿 **Green Campus Initiatives:**\n✅ Solar panels installed on campus.\n✅ Rainwater harvesting system.\n✅ Regular tree plantation drives by NSS.\n✅ E-waste recycling & plastic-free campus.\n✅ Green landscaped gardens & walking paths.\nJECRC is committed to environmental sustainability!"],
+      "responses_hi": ["🌿 **ग्रीन कैंपस पहल:**\n✅ कैंपस में सोलर पैनल लगे हुए हैं।\n✅ रेनवॉटर हार्वेस्टिंग सिस्टम।\n✅ NSS द्वारा नियमित वृक्षारोपण अभियान।\n✅ ई-वेस्ट रीसाइक्लिंग और प्लास्टिक-मुक्त कैंपस।\n✅ हरे-भरे बगीचे और पैदल रास्ते।\nJECRC पर्यावरणीय स्थिरता के लिए प्रतिबद्ध है!"]
+    },
+    {
+      "tag": "events",
+      "patterns": ["events", "college events", "fest", "cultural fest", "technical fest", "annual fest", "j-techtrix", "perception", "hackathon"],
+      "responses": ["🎉 **Events & Fests:**\n🔹 **J-TECHTRIX:** Huge Annual Technical Project Exhibition.\n🔹 **PERCEPTION:** The massive Cultural & Technical Fest (Dance, Music, Fashion, Celeb Nights).\n🔹 Regular Hackathons, Seminars, and Workshops!"],
+      "responses_hi": ["🎉 **इवेंट्स और फेस्ट:**\n🔹 **J-TECHTRIX:** विशाल वार्षिक टेक्निकल प्रोजेक्ट प्रदर्शनी।\n🔹 **PERCEPTION:** भव्य सांस्कृतिक और तकनीकी फेस्ट (डांस, म्यूज़िक, फैशन, सेलिब्रिटी नाइट)।\n🔹 नियमित हैकाथॉन, सेमिनार और वर्कशॉप!"]
+    },
+    {
+      "tag": "clubs",
+      "patterns": ["clubs", "student clubs", "coding club", "robotics club", "technical clubs", "cultural clubs", "societies"],
+      "responses": ["🎯 **Student Clubs:**\nJoin Enactus, Coding Club, Robotics Club, Dance/Music Clubs, Drama Society, Photography Club, or professional chapters like IEEE, CSI, and ACM. Register during the club fair in your first year!"],
+      "responses_hi": ["🎯 **स्टूडेंट क्लब:**\nEnactus, Coding Club, Robotics Club, Dance/Music Club, Drama Society, Photography Club, या IEEE, CSI, ACM जैसे प्रोफेशनल चैप्टर में शामिल हों। पहले साल क्लब फेयर में रजिस्टर करें!"]
+    },
+    {
+      "tag": "ncc_nss",
+      "patterns": ["ncc", "nss", "national service scheme", "social service", "blood donation", "cleanliness drive", "volunteer"],
+      "responses": ["🇮🇳 **NSS Unit:**\nHighly active NSS unit conducting blood donation camps, tree plantation, village adoption, and social awareness campaigns. Great for personality development and certificates!"],
+      "responses_hi": ["🇮🇳 **NSS यूनिट:**\nअत्यधिक सक्रिय NSS यूनिट जो रक्तदान शिविर, वृक्षारोपण, गांव गोद लेना और सामाजिक जागरूकता अभियान चलाता है। व्यक्तित्व विकास और प्रमाण पत्रों के लिए बढ़िया!"]
+    },
+    {
+      "tag": "entrepreneurship_ecell",
+      "patterns": ["entrepreneur", "startup", "e-cell", "ecell", "entrepreneurship cell", "business idea", "incubation"],
+      "responses": ["🚀 **Entrepreneurship Cell (E-Cell):**\nPromotes startup culture at JECRC!\n🔹 Business plan competitions & Startup weekends.\n🔹 Mentorship from industry experts.\n🔹 Incubation support for promising ideas.\n🔹 Several student startups have been funded!"],
+      "responses_hi": ["🚀 **उद्यमिता सेल (E-Cell):**\nJECRC में स्टार्टअप कल्चर को बढ़ावा देता है!\n🔹 बिज़नेस प्लान प्रतियोगिताएं और स्टार्टअप वीकेंड।\n🔹 इंडस्ट्री एक्सपर्ट से मेंटरशिप।\n🔹 होनहार आइडिया के लिए इन्क्यूबेशन सपोर्ट।\n🔹 कई छात्र स्टार्टअप को फंडिंग मिली है!"]
+    },
+    {
+      "tag": "coding_competitions",
+      "patterns": ["coding competition", "competitive programming", "code contest", "coding event", "tech competition", "smart india hackathon", "sih", "code jam", "icpc"],
+      "responses": ["💻 **Coding Competitions:**\n🔹 Coding Club organizes regular contests.\n🔹 Students participate in SIH, HackRX, ICPC.\n🔹 CodeChef, Codeforces, LeetCode practice groups.\n🔹 Annual Hackathon during J-TECHTRIX.\n🔹 Winners get certificates & placement advantages!\n🔹 Join Coding Club in 1st year!"],
+      "responses_hi": ["💻 **कोडिंग प्रतियोगिताएं:**\n🔹 Coding Club नियमित प्रतियोगिताएं आयोजित करता है।\n🔹 छात्र SIH, HackRX, ICPC में भाग लेते हैं।\n🔹 CodeChef, Codeforces, LeetCode प्रैक्टिस ग्रुप।\n🔹 J-TECHTRIX के दौरान वार्षिक हैकाथॉन।\n🔹 विजेताओं को सर्टिफिकेट और प्लेसमेंट लाभ!\n🔹 1st Year में Coding Club जॉइन करें!"]
+    },
+    {
+      "tag": "certifications_courses",
+      "patterns": ["certification", "online courses", "nptel", "coursera", "extra courses", "mooc", "value added courses"],
+      "responses": ["📜 **Certifications:**\nJECRC strongly supports NPTEL/SWAYAM courses for extra credits. We also conduct value-added courses in AWS, AI/ML, Python, and AutoCAD to boost your resume!"],
+      "responses_hi": ["📜 **सर्टिफिकेशन:**\nJECRC एक्स्ट्रा क्रेडिट के लिए NPTEL/SWAYAM कोर्स को पूरा सपोर्ट करता है। हम AWS, AI/ML, Python और AutoCAD में वैल्यू-एडेड कोर्स भी चलाते हैं जो आपके रिज़्यूमे को मज़बूत बनाएं!"]
+    },
+    {
+      "tag": "research_publications",
+      "patterns": ["research", "paper publication", "patent", "research cell", "research and development", "r&d", "innovation", "spiritual research cell research"],
+      "responses": ["🔬 **Research & Publications:**\nJECRC encourages research through:\n🔹 Dedicated R&D Cell and Innovation Lab.\n🔹 Faculty & students publish in IEEE, Springer, Scopus journals.\n🔹 Patent filing support available.\n🔹 Annual research paper presentation events.\n🔹 Collaborations with industry for funded projects."],
+      "responses_hi": ["🔬 **रिसर्च और पब्लिकेशन:**\nJECRC रिसर्च को प्रोत्साहित करता है:\n🔹 समर्पित R&D सेल और इनोवेशन लैब।\n🔹 फैकल्टी और छात्र IEEE, Springer, Scopus जर्नल में प्रकाशित करते हैं।\n🔹 पेटेंट फाइलिंग सपोर्ट उपलब्ध।\n🔹 वार्षिक रिसर्च पेपर प्रेज़ेंटेशन इवेंट।\n🔹 फंडेड प्रोजेक्ट के लिए इंडस्ट्री कोलैबोरेशन।"]
+    },
+    {
+      "tag": "hod_faculty",
+      "patterns": ["faculty", "hod", "professor", "teacher", "faculty list", "department head"],
+      "responses": ["👨‍🏫 **Faculty / HOD:**\n🔹 Each department has an experienced HOD.\n🔹 200+ qualified faculty members across all departments.\n🔹 Contact your department HOD for academic queries.\n📍 HOD offices are in respective department blocks."],
+      "responses_hi": ["👨‍🏫 **फैकल्टी / HOD:**\n🔹 हर डिपार्टमेंट में एक अनुभवी HOD है।\n🔹 सभी डिपार्टमेंट में 200+ योग्य फैकल्टी सदस्य।\n🔹 शैक्षणिक प्रश्नों के लिए अपने डिपार्टमेंट HOD से संपर्क करें।\n📍 HOD ऑफिस संबंधित डिपार्टमेंट ब्लॉक में हैं।"]
+    },
+    {
+      "tag": "faculty_quality",
+      "patterns": ["faculty quality", "teachers experienced", "faculty qualification", "phd faculty", "good teachers", "teaching quality", "faculty ratio", "student teacher ratio"],
+      "responses": ["👨‍🏫 **Faculty Quality:**\n🔹 200+ experienced faculty members.\n🔹 60%+ hold Ph.D. or pursuing.\n🔹 Student-Teacher ratio: ~15:1\n🔹 Regular FDPs (Faculty Development Programs).\n🔹 Industry experts as guest lecturers.\n🔹 Mentorship: Each student gets a faculty mentor."],
+      "responses_hi": ["👨‍🏫 **फैकल्टी गुणवत्ता:**\n🔹 200+ अनुभवी फैकल्टी सदस्य।\n🔹 60%+ Ph.D. प्राप्त या कर रहे हैं।\n🔹 छात्र-शिक्षक अनुपात: ~15:1\n🔹 नियमित FDP (फैकल्टी डेवलपमेंट प्रोग्राम)।\n🔹 इंडस्ट्री एक्सपर्ट गेस्ट लेक्चरर के रूप में।\n🔹 मेंटरशिप: हर छात्र को एक फैकल्टी मेंटर मिलता है।"]
+    },
+    {
+      "tag": "complaint",
+      "patterns": ["complaint", "problem", "issue", "not working", "facing problem", "where to complain", "grievance", "report issue"],
+      "responses": ["⚠️ **Grievances:**\n🔹 Academic: Talk to your HOD.\n🔹 Hostel: Talk to the Warden.\n🔹 Online Grievance Portal available on the website.\nIf it's an emergency, please contact campus security immediately!"],
+      "responses_hi": ["⚠️ **शिकायतें:**\n🔹 शैक्षणिक: अपने HOD से बात करें।\n🔹 हॉस्टल: वार्डन से बात करें।\n🔹 वेबसाइट पर ऑनलाइन शिकायत पोर्टल उपलब्ध है।\nइमरजेंसी में तुरंत कैंपस सिक्योरिटी से संपर्क करें!"]
+    },
+    {
+      "tag": "complaint_against_faculty",
+      "patterns": ["complaint against teacher", "teacher problem", "faculty complaint", "professor unfair", "biased teacher", "teacher issue"],
+      "responses": ["⚠️ **Faculty Related Complaints:**\n🔹 First approach: Talk to your HOD.\n🔹 If unresolved: Meet Dean Academics.\n🔹 Written complaint: Submit to Director's office.\n🔹 Online: Use Grievance Portal on website.\n🔹 ICC for harassment complaints.\n⚠️ All complaints are treated confidentially."],
+      "responses_hi": ["⚠️ **फैकल्टी संबंधित शिकायतें:**\n🔹 पहला कदम: अपने HOD से बात करें।\n🔹 हल न हो तो: डीन एकेडमिक्स से मिलें।\n🔹 लिखित शिकायत: डायरेक्टर ऑफिस में जमा करें।\n🔹 ऑनलाइन: वेबसाइट पर शिकायत पोर्टल का उपयोग करें।\n🔹 उत्पीड़न शिकायतों के लिए ICC।\n⚠️ सभी शिकायतें गोपनीय रखी जाती हैं।"]
+    },
+    {
+      "tag": "ragging",
+      "patterns": ["ragging", "anti ragging", "ragging complaint", "bullying", "harassment", "senior ragging"],
+      "responses": ["🚫 **ZERO TOLERANCE for Ragging:**\nRagging is a criminal offence. If faced, report IMMEDIATELY to the Anti-Ragging Squad, HOD, or call the National Helpline: 1800-180-5522. Identity is kept 100% confidential."],
+      "responses_hi": ["🚫 **रैगिंग के प्रति ज़ीरो टॉलरेंस:**\nरैगिंग एक आपराधिक अपराध है। अगर सामना हो तो तुरंत एंटी-रैगिंग स्क्वाड, HOD को रिपोर्ट करें या नेशनल हेल्पलाइन कॉल करें: 1800-180-5522। पहचान 100% गोपनीय रखी जाती है।"]
+    },
+    {
+      "tag": "anti_drug",
+      "patterns": ["drugs", "smoking", "alcohol", "substance abuse", "tobacco", "cigarette", "nasha"],
+      "responses": ["🚭 **Anti-Drug Policy:**\nJECRC is a 100% Smoke-Free & Drug-Free campus. Smoking, alcohol, or drugs will lead to immediate suspension/expulsion and police action."],
+      "responses_hi": ["🚭 **नशा विरोधी नीति:**\nJECRC 100% धूम्रपान-मुक्त और नशा-मुक्त कैंपस है। धूम्रपान, शराब या नशीली दवाओं का सेवन करने पर तुरंत निलंबन/निष्कासन और पुलिस कार्रवाई होगी।"]
+    },
+    {
+      "tag": "women_cell",
+      "patterns": ["women cell", "icc", "internal complaints committee", "women safety", "sexual harassment", "eve teasing", "girls safety"],
+      "responses": ["👩 **Women's Cell (ICC):**\nDedicated to women's safety on campus. Any harassment, eve-teasing, or gender bias can be confidentially reported to the ICC Chairperson or any female faculty. Strict action is guaranteed."],
+      "responses_hi": ["👩 **महिला सेल (ICC):**\nकैंपस में महिला सुरक्षा के लिए समर्पित। किसी भी उत्पीड़न, छेड़छाड़ या लिंग भेदभाव की गोपनीय शिकायत ICC चेयरपर्सन या किसी भी महिला फैकल्टी से कर सकते हैं। सख्त कार्रवाई की गारंटी।"]
+    },
+    {
+      "tag": "counselling_mental_health",
+      "patterns": ["counselling", "mental health", "stress", "depression", "anxiety", "help me", "emotional support", "psychologist"],
+      "responses": ["💚 **Mental Health Support:**\nYou are not alone! Reach out to your faculty mentor, HOD, or the Spiritual Research Cell (SRC) for counselling. \nNational Crisis Helpline: 9152987821 (iCall)."],
+      "responses_hi": ["💚 **मानसिक स्वास्थ्य सहायता:**\nआप अकेले नहीं हैं! अपने फैकल्टी मेंटर, HOD, या Spiritual Research Cell (SRC) से काउंसलिंग के लिए संपर्क करें।\nनेशनल क्राइसिस हेल्पलाइन: 9152987821 (iCall)।"]
+    },
+    {
+      "tag": "medical",
+      "patterns": ["medical", "hospital", "health center", "doctor", "first aid", "emergency", "tabiyat kharab hai", "injury", "sick"],
+      "responses": ["🏥 **Medical Facility:**\nFirst Aid and a visiting doctor are available on campus. For serious emergencies, Mahatma Gandhi Hospital is just 8 km away. Call 108 for ambulance or contact campus security 24/7."],
+      "responses_hi": ["🏥 **मेडिकल सुविधा:**\nकैंपस में प्राथमिक चिकित्सा और विज़िटिंग डॉक्टर उपलब्ध हैं। गंभीर आपातकाल के लिए महात्मा गांधी हॉस्पिटल सिर्फ 8 km दूर है। एम्बुलेंस के लिए 108 कॉल करें या 24/7 कैंपस सिक्योरिटी से संपर्क करें।"]
+    },
+    {
+      "tag": "disability_support",
+      "patterns": ["disability", "differently abled", "handicapped", "wheelchair", "special needs", "pwd", "ramp"],
+      "responses": ["♿ **PwD Support:**\nCampus has ramps, accessible washrooms, and lifts in select blocks. Extra time and scribes for exams are provided as per RTU rules."],
+      "responses_hi": ["♿ **दिव्यांग सहायता (PwD):**\nकैंपस में रैंप, सुलभ शौचालय और चुनिंदा ब्लॉक में लिफ्ट हैं। RTU नियमों के अनुसार परीक्षा में अतिरिक्त समय और लिपिक (स्क्राइब) की सुविधा दी जाती है।"]
+    },
+    {
+      "tag": "anti_discrimination",
+      "patterns": ["discrimination", "reservation", "caste discrimination", "sc st obc", "equal opportunity", "bias"],
+      "responses": ["⚖️ **Anti-Discrimination Policy:**\nJECRC strictly follows a zero-tolerance policy against discrimination based on caste, religion, gender, or economic background.\n🔹 Equal Opportunity Cell ensures fairness.\n🔹 SC/ST/OBC/EWS reservations as per Govt norms.\n🔹 Report any discrimination to the Dean Student Welfare immediately."],
+      "responses_hi": ["⚖️ **भेदभाव विरोधी नीति:**\nJECRC जाति, धर्म, लिंग या आर्थिक पृष्ठभूमि के आधार पर भेदभाव के खिलाफ ज़ीरो टॉलरेंस नीति का सख्ती से पालन करता है।\n🔹 समान अवसर सेल निष्पक्षता सुनिश्चित करता है।\n🔹 सरकारी नियमों के अनुसार SC/ST/OBC/EWS आरक्षण।\n🔹 किसी भी भेदभाव की शिकायत तुरंत डीन स्टूडेंट वेलफेयर को करें।"]
+    },
+    {
+      "tag": "discipline_rules",
+      "patterns": ["discipline", "rules", "code of conduct", "college rules", "punishment", "suspension", "expelled"],
+      "responses": ["📜 **Code of Conduct:**\n✅ Maintain decorum in classes & campus.\n✅ College ID mandatory at all times.\n✅ No ragging, bullying, or substance abuse.\n❌ Violations lead to: Warning → Fine → Suspension → Expulsion.\n❌ Damaging college property will result in penalty + disciplinary action."],
+      "responses_hi": ["📜 **आचार संहिता:**\n✅ कक्षा और कैंपस में शिष्टाचार बनाए रखें।\n✅ कॉलेज ID हर समय अनिवार्य।\n✅ रैगिंग, बुलिंग या नशा नहीं।\n❌ उल्लंघन पर: चेतावनी → जुर्माना → निलंबन → निष्कासन।\n❌ कॉलेज संपत्ति को नुकसान पहुंचाने पर जुर्माना + अनुशासनात्मक कार्रवाई।"]
+    },
+    {
+      "tag": "dress_code",
+      "patterns": ["dress code", "uniform", "what to wear", "college dress", "formals", "id card", "identity card"],
+      "responses": ["👔 **Dress Code & ID:**\n🔹 Wear formal/semi-formal decent clothing.\n🔹 **College ID Card is MANDATORY** at all times on campus.\n🔹 Lab coats/aprons are required in specific labs. Slippers/shorts are not allowed in classes."],
+      "responses_hi": ["👔 **ड्रेस कोड और ID:**\n🔹 फॉर्मल/सेमी-फॉर्मल शालीन कपड़े पहनें।\n🔹 कैंपस में **कॉलेज ID कार्ड हर समय अनिवार्य** है।\n🔹 विशेष लैब में लैब कोट/एप्रन ज़रूरी है। कक्षा में चप्पल/शॉर्ट्स की अनुमति नहीं।"]
+    },
+    {
+      "tag": "mobile_laptop_policy",
+      "patterns": ["mobile allowed", "phone in class", "laptop required", "laptop mandatory", "bring laptop", "mobile phone policy", "phone use campus", "tablet allowed"],
+      "responses": ["📱 **Mobile & Laptop Policy:**\n🔹 Mobile on SILENT during classes.\n🔹 Phone usage NOT allowed during lectures/labs.\n🔹 Laptop: Recommended for CSE/IT, not mandatory.\n🔹 Computer labs available for all students.\n🔹 Wi-Fi on personal devices with student login."],
+      "responses_hi": ["📱 **मोबाइल और लैपटॉप नीति:**\n🔹 कक्षा में मोबाइल साइलेंट पर रखें।\n🔹 लेक्चर/लैब के दौरान फोन इस्तेमाल की अनुमति नहीं।\n🔹 लैपटॉप: CSE/IT के लिए सुझावित, अनिवार्य नहीं।\n🔹 सभी छात्रों के लिए कंप्यूटर लैब उपलब्ध।\n🔹 स्टूडेंट लॉगिन से पर्सनल डिवाइस पर Wi-Fi।"]
+    },
+    {
+      "tag": "jecrc_university_vs_foundation",
+      "patterns": ["jecrc university", "jecrc foundation vs university", "difference jecrc", "which jecrc", "jecrc college vs university", "jecrc uni", "kitne jecrc hai", "jaipur jecrc"],
+      "responses": ["🏛️ **JECRC University vs Foundation:**\n⚠️ These are TWO DIFFERENT institutions!\n🔹 **JECRC Foundation** (Est. 2000) - Affiliated to RTU. Sitapura.\n🔹 **JECRC University** (Est. 2012) - Private University. Tonk Road.\n🔹 This chatbot is for **JECRC Foundation** only!\n📍 Verify before applying!"],
+      "responses_hi": ["🏛️ **JECRC University बनाम Foundation:**\n⚠️ ये दो अलग-अलग संस्थान हैं!\n🔹 **JECRC Foundation** (स्थापना 2000) - RTU से संबद्ध। सीतापुरा।\n🔹 **JECRC University** (स्थापना 2012) - प्राइवेट यूनिवर्सिटी। टोंक रोड।\n🔹 यह चैटबॉट सिर्फ **JECRC Foundation** के लिए है!\n📍 अप्लाई करने से पहले वेरिफाई करें!"]
+    },
+    {
+      "tag": "rtu_affiliation",
+      "patterns": ["rtu", "rajasthan technical university", "rtu affiliated", "autonomous", "deemed university", "affiliation", "college code", "rtu code"],
+      "responses": ["🏛️ **RTU Affiliation:**\n🔹 Affiliated to **RTU, Kota**.\n🔹 RTU sets syllabus, conducts exams, issues degrees.\n🔹 JECRC is NOT autonomous/deemed university.\n🔹 College Code: Check REAP portal.\n🌐 RTU: rtu.ac.in"],
+      "responses_hi": ["🏛️ **RTU संबद्धता:**\n🔹 **RTU, कोटा** से संबद्ध।\n🔹 RTU सिलेबस तय करता है, परीक्षा आयोजित करता है, डिग्री जारी करता है।\n🔹 JECRC ऑटोनॉमस/डीम्ड यूनिवर्सिटी नहीं है।\n🔹 कॉलेज कोड: REAP पोर्टल पर देखें।\n🌐 RTU: rtu.ac.in"]
+    },
+    {
+      "tag": "accreditation",
+      "patterns": ["accreditation", "naac", "nba", "aicte", "ranking", "college rating", "approved by", "recognition"],
+      "responses": ["🏅 **Accreditation & Approvals:**\n✅ **AICTE** Approved (All India Council for Technical Education)\n✅ **NAAC** Accredited\n✅ **NBA** Accredited (Selected Programs)\n✅ Affiliated to **RTU, Kota**\n🔹 Consistently ranked among top private engineering colleges in Rajasthan."],
+      "responses_hi": ["🏅 **मान्यता और अनुमोदन:**\n✅ **AICTE** अनुमोदित (अखिल भारतीय तकनीकी शिक्षा परिषद)\n✅ **NAAC** मान्यता प्राप्त\n✅ **NBA** मान्यता प्राप्त (चुनिंदा प्रोग्राम)\n✅ **RTU, कोटा** से संबद्ध\n🔹 राजस्थान के शीर्ष प्राइवेट इंजीनियरिंग कॉलेजों में लगातार रैंक।"]
+    },
+    {
+      "tag": "jecrc_achievements",
+      "patterns": ["achievements", "awards", "college awards", "jecrc awards", "recognition", "college achievements"],
+      "responses": ["🏆 **JECRC Achievements:**\n✅ NAAC & NBA Accredited.\n✅ Ranked among top private engg colleges in Rajasthan.\n✅ 20,000+ successful alumni network.\n✅ Multiple Smart India Hackathon (SIH) winners.\n✅ Active IEEE, CSI, ACM professional chapters.\n✅ Regular paper publications in top journals."],
+      "responses_hi": ["🏆 **JECRC उपलब्धियां:**\n✅ NAAC और NBA मान्यता प्राप्त।\n✅ राजस्थान के शीर्ष प्राइवेट इंजीनियरिंग कॉलेजों में रैंक।\n✅ 20,000+ सफल एलुमनाई नेटवर्क।\n✅ कई Smart India Hackathon (SIH) विजेता।\n✅ सक्रिय IEEE, CSI, ACM प्रोफेशनल चैप्टर।\n✅ शीर्ष जर्नल में नियमित पेपर प्रकाशन।"]
+    },
+    {
+      "tag": "admission_comparison",
+      "patterns": ["jecrc vs", "compare college", "is jecrc good", "jecrc review", "jecrc rating", "should i join jecrc", "jecrc kaisa hai", "worth joining", "college review"],
+      "responses": ["⭐ **Why Choose JECRC Foundation?**\n✅ 20+ Years of Excellence\n✅ AICTE Approved, NAAC & NBA Accredited\n✅ 85%+ Placement Rate (Highest: ₹44 LPA+)\n✅ Experienced Faculty & Top Infrastructure\n✅ Vibrant campus life with 15+ active clubs!"],
+      "responses_hi": ["⭐ **JECRC Foundation क्यों चुनें?**\n✅ 20+ साल की उत्कृष्टता\n✅ AICTE अनुमोदित, NAAC और NBA मान्यता प्राप्त\n✅ 85%+ प्लेसमेंट दर (सबसे ज़्यादा: ₹44 LPA+)\n✅ अनुभवी फैकल्टी और शीर्ष इंफ्रास्ट्रक्चर\n✅ 15+ एक्टिव क्लब के साथ जीवंत कैंपस लाइफ!"]
+    },
+    {
+      "tag": "branch_guidance",
+      "patterns": ["which branch best", "suggest branch", "best branch jecrc", "cse vs it", "ece vs cse", "which course to choose", "branch selection help", "konsa branch lu", "it better or cse"],
+      "responses": ["🤔 **Branch Selection Guide:**\n🔹 **CSE/IT/AI-ML:** Best placements (₹4-44 LPA).\n🔹 **ECE:** Core + IT jobs. IoT growing.\n🔹 **EE:** Power sector + Govt jobs.\n🔹 **ME:** Manufacturing + GATE.\n🔹 **CE:** Construction + Govt.\n💡 Choose based on INTEREST, not just packages!\n📊 By packages: CSE > IT > AI-ML > ECE > EE > ME > CE"],
+      "responses_hi": ["🤔 **ब्रांच चयन गाइड:**\n🔹 **CSE/IT/AI-ML:** सबसे अच्छी प्लेसमेंट (₹4-44 LPA)।\n🔹 **ECE:** Core + IT जॉब। IoT बढ़ रहा है।\n🔹 **EE:** पावर सेक्टर + सरकारी नौकरी।\n🔹 **ME:** मैन्युफैक्चरिंग + GATE।\n🔹 **CE:** कंस्ट्रक्शन + सरकारी।\n💡 सिर्फ पैकेज नहीं, रुचि के आधार पर चुनें!\n📊 पैकेज अनुसार: CSE > IT > AI-ML > ECE > EE > ME > CE"]
+    },
+    {
+      "tag": "alumni",
+      "patterns": ["alumni", "alumni network", "famous alumni", "alumni association", "old students", "alumni meet"],
+      "responses": ["🎓 **Alumni Network:**\nJECRC has 20,000+ alumni working in top MNCs worldwide (Google, Amazon, Microsoft, TCS, etc.).\n🔹 Active Alumni Association organizes annual meets.\n🔹 Alumni mentoring programs for current students.\n🔹 Alumni also contribute to placements and guest lectures!"],
+      "responses_hi": ["🎓 **एलुमनाई नेटवर्क:**\nJECRC के 20,000+ एलुमनाई दुनियाभर की टॉप MNC में काम करते हैं (Google, Amazon, Microsoft, TCS आदि)।\n🔹 सक्रिय एलुमनाई एसोसिएशन वार्षिक मीट आयोजित करता है।\n🔹 वर्तमान छात्रों के लिए एलुमनाई मेंटरिंग प्रोग्राम।\n🔹 एलुमनाई प्लेसमेंट और गेस्ट लेक्चर में भी योगदान देते हैं!"]
+    },
+    {
+      "tag": "alumni_stories",
+      "patterns": ["successful alumni", "where alumni work", "alumni in google", "alumni in amazon", "famous jecrc students", "alumni success stories"],
+      "responses": ["🌟 **Alumni Success Stories:**\n🔹 Alumni working at Google, Amazon, Microsoft, Adobe, Oracle.\n🔹 Many in leadership roles at TCS, Infosys, Wipro.\n🔹 Several alumni are successful entrepreneurs.\n🔹 Alumni in ISRO, DRDO, IAS, IPS services.\n🔹 Alumni mentoring programs connect you with seniors.\n🔹 Annual Alumni Meet celebrates achievements!"],
+      "responses_hi": ["🌟 **एलुमनाई सफलता की कहानियां:**\n🔹 एलुमनाई Google, Amazon, Microsoft, Adobe, Oracle में काम कर रहे हैं।\n🔹 कई TCS, Infosys, Wipro में लीडरशिप रोल में।\n🔹 कई एलुमनाई सफल उद्यमी हैं।\n🔹 ISRO, DRDO, IAS, IPS सेवाओं में एलुमनाई।\n🔹 एलुमनाई मेंटरिंग प्रोग्राम आपको सीनियर्स से जोड़ता है।\n🔹 वार्षिक एलुमनाई मीट उपलब्धियों का जश्न मनाता है!"]
+    },
+    {
+      "tag": "higher_studies",
+      "patterns": ["higher studies", "after btech", "gate preparation", "cat preparation", "mtech after btech", "abroad studies", "ms abroad"],
+      "responses": ["🎓 **Higher Studies After B.Tech:**\n🔹 **M.Tech (India):** Appear for GATE exam.\n🔹 **MBA:** Appear for CAT/MAT/RMAT.\n🔹 **MS Abroad:** GRE + TOEFL/IELTS required.\n🔹 **Civil Services:** Many alumni cleared UPSC!\nJECRC supports GATE coaching and career guidance through T&P Cell."],
+      "responses_hi": ["🎓 **B.Tech के बाद उच्च शिक्षा:**\n🔹 **M.Tech (भारत):** GATE परीक्षा दें।\n🔹 **MBA:** CAT/MAT/RMAT परीक्षा दें।\n🔹 **MS विदेश:** GRE + TOEFL/IELTS ज़रूरी।\n🔹 **सिविल सेवा:** कई एलुमनाई ने UPSC पास किया!\nJECRC T&P सेल के माध्यम से GATE कोचिंग और करियर गाइडेंस सपोर्ट करता है।"]
+    },
+    {
+      "tag": "abroad_studies",
+      "patterns": ["study abroad", "ms abroad", "usa university", "uk university", "canada study", "gre", "toefl", "ielts", "study visa", "abroad scholarship"],
+      "responses": ["✈️ **Study Abroad After B.Tech:**\n🔹 **MS (USA/Canada/UK/Germany):** GRE + TOEFL/IELTS required.\n🔹 CGPA 7.5+ preferred for top universities.\n🔹 SOP, LOR, Resume needed for applications.\n🔹 Germany & some EU countries: Low/No tuition!\n🔹 T&P Cell provides guidance sessions for abroad studies.\n💡 Start preparing GRE from 3rd year!"],
+      "responses_hi": ["✈️ **B.Tech के बाद विदेश में पढ़ाई:**\n🔹 **MS (USA/Canada/UK/Germany):** GRE + TOEFL/IELTS ज़रूरी।\n🔹 टॉप यूनिवर्सिटी के लिए CGPA 7.5+ पसंदीदा।\n🔹 एप्लीकेशन के लिए SOP, LOR, रिज़्यूमे चाहिए।\n🔹 जर्मनी और कुछ EU देश: कम/बिना ट्यूशन!\n🔹 T&P सेल विदेश में पढ़ाई के लिए गाइडेंस सेशन देता है।\n💡 3rd Year से GRE की तैयारी शुरू करें!"]
+    },
+    {
+      "tag": "govt_exam_preparation",
+      "patterns": ["government job", "sarkari naukri", "gate coaching", "upsc", "ssc", "railway exam", "govt exam preparation", "competitive exam", "ese exam", "isro"],
+      "responses": ["📚 **Govt Exam / GATE Preparation:**\n🔹 GATE study groups active in all branches.\n🔹 Faculty provide guidance & previous papers.\n🔹 Library has GATE/SSC/UPSC books.\n🔹 Alumni cleared GATE, ESE, ISRO, DRDO.\n🔹 Coaching centers available near campus.\n⚠️ Maintain 75% attendance alongside!"],
+      "responses_hi": ["📚 **सरकारी परीक्षा / GATE तैयारी:**\n🔹 सभी ब्रांच में GATE स्टडी ग्रुप सक्रिय।\n🔹 फैकल्टी गाइडेंस और पिछले पेपर देते हैं।\n🔹 लाइब्रेरी में GATE/SSC/UPSC की किताबें।\n🔹 एलुमनाई ने GATE, ESE, ISRO, DRDO पास किया।\n🔹 कैंपस के पास कोचिंग सेंटर उपलब्ध।\n⚠️ साथ में 75% उपस्थिति भी बनाए रखें!"]
+    },
+    {
+      "tag": "phd_program",
+      "patterns": ["phd", "doctorate", "phd at jecrc", "research degree", "can i do phd", "phd admission"],
+      "responses": ["🎓 **Ph.D. Program:**\n🔹 JECRC Foundation currently does not offer Ph.D. directly.\n🔹 For Ph.D., apply to RTU, IITs, NITs, or central universities.\n🔹 JECRC faculty can guide you for Ph.D. applications.\n🔹 GATE/NET score required for most Ph.D. programs."],
+      "responses_hi": ["🎓 **Ph.D. प्रोग्राम:**\n🔹 JECRC Foundation वर्तमान में सीधे Ph.D. नहीं कराता।\n🔹 Ph.D. के लिए RTU, IITs, NITs या केंद्रीय विश्वविद्यालयों में अप्लाई करें।\n🔹 JECRC फैकल्टी Ph.D. आवेदन में गाइड कर सकते हैं।\n🔹 ज़्यादातर Ph.D. प्रोग्राम के लिए GATE/NET स्कोर ज़रूरी।"]
+    },
+    {
+      "tag": "convocation",
+      "patterns": ["convocation", "degree certificate", "graduation ceremony", "passing certificate", "degree kab milega"],
+      "responses": ["🎓 **Convocation / Degree:**\n🔹 RTU conducts convocation ceremony for degree distribution.\n🔹 Provisional Certificate is issued by college within weeks of final result.\n🔹 Original Degree comes from RTU (may take 6-12 months after convocation).\n📍 Contact Exam Cell for status updates."],
+      "responses_hi": ["🎓 **दीक्षांत समारोह / डिग्री:**\n🔹 RTU डिग्री वितरण के लिए दीक्षांत समारोह आयोजित करता है।\n🔹 अंतिम रिज़ल्ट के कुछ हफ्तों में कॉलेज प्रोविज़नल सर्टिफिकेट जारी करता है।\n🔹 ओरिजिनल डिग्री RTU से आती है (दीक्षांत के बाद 6-12 महीने लग सकते हैं)।\n📍 स्टेटस अपडेट के लिए एग्ज़ाम सेल से संपर्क करें।"]
+    },
+    {
+      "tag": "leaving_certificate",
+      "patterns": ["leaving certificate", "tc", "character certificate", "bonafide certificate", "enrollment number", "student verification"],
+      "responses": ["📄 **Certificates:**\n🔹 **Bonafide:** Apply at Admin office (ready in 2-3 days).\n🔹 **Character Certificate:** From Dean Student Welfare.\n🔹 **TC (Transfer Certificate):** At time of leaving/graduation.\n🔹 **Enrollment Number:** Allotted by RTU in 1st semester.\n📍 All certificates: Administrative Office, Main Building."],
+      "responses_hi": ["📄 **प्रमाण पत्र:**\n🔹 **बोनाफाइड:** एडमिन ऑफिस में अप्लाई करें (2-3 दिन में तैयार)।\n🔹 **चरित्र प्रमाण पत्र:** डीन स्टूडेंट वेलफेयर से।\n🔹 **TC (ट्रांसफर सर्टिफिकेट):** कॉलेज छोड़ने/ग्रेजुएशन के समय।\n🔹 **एनरोलमेंट नंबर:** 1st सेमेस्टर में RTU द्वारा आवंटित।\n📍 सभी प्रमाण पत्र: प्रशासनिक कार्यालय, मुख्य भवन।"]
+    },
+    {
+      "tag": "parent_guardian",
+      "patterns": ["parent", "guardian", "ptm", "parent teacher meeting", "parent portal", "parent contact"],
+      "responses": ["👨‍👩‍👧 **For Parents / Guardians:**\n🔹 **PTM (Parent-Teacher Meetings)** are held each semester.\n🔹 Parents receive SMS/Email alerts for attendance & performance.\n🔹 Parents can contact HOD or Class Coordinator anytime.\n📞 General Helpline: 0141-2770232\n🔹 Parent login available on Student ERP Portal."],
+      "responses_hi": ["👨‍👩‍👧 **अभिभावकों के लिए:**\n🔹 हर सेमेस्टर **PTM (पैरेंट-टीचर मीटिंग)** होती है।\n🔹 अभिभावकों को उपस्थिति और प्रदर्शन के लिए SMS/Email अलर्ट मिलते हैं।\n🔹 अभिभावक किसी भी समय HOD या क्लास कोऑर्डिनेटर से संपर्क कर सकते हैं।\n📞 सामान्य हेल्पलाइन: 0141-2770232\n🔹 स्टूडेंट ERP पोर्टल पर पैरेंट लॉगिन उपलब्ध।"]
+    },
+    {
+      "tag": "student_email_benefits",
+      "patterns": ["college email", "student email", "official email", "microsoft student", "google student", "github student", "student benefits", "free software", "student license", "office 365"],
+      "responses": ["📧 **Student Digital Benefits:**\n🔹 Official college email ID on admission.\n🔹 Microsoft Office 365 (Free).\n🔹 GitHub Student Developer Pack.\n🔹 Google Workspace access.\n🔹 JetBrains IDEs free.\n🔹 AWS/Azure student credits.\n📍 Contact IT Helpdesk for activation."],
+      "responses_hi": ["📧 **छात्र डिजिटल लाभ:**\n🔹 एडमिशन पर ऑफिशियल कॉलेज ईमेल ID।\n🔹 Microsoft Office 365 (मुफ्त)।\n🔹 GitHub Student Developer Pack।\n🔹 Google Workspace एक्सेस।\n🔹 JetBrains IDEs मुफ्त।\n🔹 AWS/Azure स्टूडेंट क्रेडिट।\n📍 एक्टिवेशन के लिए IT हेल्पडेस्क से संपर्क करें।"]
+    },
+    {
+      "tag": "college_app",
+      "patterns": ["college app", "mobile app", "jecrc app", "download app", "android app", "ios app"],
+      "responses": ["📱 **College App:**\n🔹 JECRC uses the Student ERP Portal (web-based).\n🔹 Accessible via mobile browser.\n🔹 Check attendance, marks, fee status, notices.\n🔹 Login: Enrollment number + password.\n📍 For app/login issues: IT Helpdesk."],
+      "responses_hi": ["📱 **कॉलेज ऐप:**\n🔹 JECRC स्टूडेंट ERP पोर्टल (वेब-बेस्ड) इस्तेमाल करता है।\n🔹 मोबाइल ब्राउज़र से एक्सेस करें।\n🔹 उपस्थिति, अंक, फीस स्टेटस, नोटिस देखें।\n🔹 लॉगिन: एनरोलमेंट नंबर + पासवर्ड।\n📍 ऐप/लॉगिन समस्या: IT हेल्पडेस्क।"]
+    },
+    {
+      "tag": "social_media",
+      "patterns": ["instagram", "facebook", "youtube", "linkedin", "twitter", "social media", "college social media", "follow jecrc", "jecrc insta"],
+      "responses": ["📱 **Social Media:**\n🔹 Instagram: @jecrcfoundation\n🔹 Facebook: JECRC Foundation\n🔹 LinkedIn: JECRC Foundation\n🔹 YouTube: JECRC Foundation Official\n🔹 Twitter/X: @jecrcfoundation\nFollow for events, placements & campus life! 📸"],
+      "responses_hi": ["📱 **सोशल मीडिया:**\n🔹 Instagram: @jecrcfoundation\n🔹 Facebook: JECRC Foundation\n🔹 LinkedIn: JECRC Foundation\n🔹 YouTube: JECRC Foundation Official\n🔹 Twitter/X: @jecrcfoundation\nइवेंट्स, प्लेसमेंट और कैंपस लाइफ के लिए फॉलो करें! 📸"]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["contact", "phone number", "email", "address", "how to contact", "contact details", "reach college", "helpline", "website"],
+      "responses": ["📞 **Contact Info:**\n📍 JECRC Campus, Sitapura Industrial Area, Jaipur - 303905\n📞 Phone: +91-141-2770232\n📧 Email: info@jecrcfoundation.com\n🌐 Web: https://jecrcfoundation.com"],
+      "responses_hi": ["📞 **संपर्क जानकारी:**\n📍 JECRC कैंपस, सीतापुरा इंडस्ट्रियल एरिया, जयपुर - 303905\n📞 फोन: +91-141-2770232\n📧 ईमेल: info@jecrcfoundation.com\n🌐 वेब: https://jecrcfoundation.com"]
+    },
+    {
+      "tag": "emergency_contacts",
+      "patterns": ["emergency", "emergency number", "ambulance", "fire", "police", "emergency contact", "helpline number", "sos"],
+      "responses": ["🚨 **Emergency Contacts:**\n🔹 Campus Security: Available 24/7 at main gate\n🔹 Ambulance: 108\n🔹 Police: 100\n🔹 Fire: 101\n🔹 Anti-Ragging Helpline: 1800-180-5522\n🔹 Women Helpline: 1091\n🔹 Mental Health (iCall): 9152987821\n🔹 College: 0141-2770232\n⚠️ Save these numbers in your phone!"],
+      "responses_hi": ["🚨 **आपातकालीन संपर्क:**\n🔹 कैंपस सिक्योरिटी: मुख्य गेट पर 24/7 उपलब्ध\n🔹 एम्बुलेंस: 108\n🔹 पुलिस: 100\n🔹 फायर: 101\n🔹 एंटी-रैगिंग हेल्पलाइन: 1800-180-5522\n🔹 महिला हेल्पलाइन: 1091\n🔹 मानसिक स्वास्थ्य (iCall): 9152987821\n🔹 कॉलेज: 0141-2770232\n⚠️ ये नंबर अपने फोन में सेव करें!"]
+    },
+    {
+      "tag": "nearby_places",
+      "patterns": ["nearby places", "near college", "restaurants near jecrc", "market near jecrc", "atm near college", "pg near jecrc", "surroundings"],
+      "responses": ["📍 **Nearby Locations:**\nCampus is in Sitapura. You have Dhabas, Fast food, ATMs just outside. Private PGs are available within 1-2 kms. Sanganer market is 5km away. Ola/Uber and city buses are easily available from the campus gate."],
+      "responses_hi": ["📍 **नज़दीकी स्थान:**\nकैंपस सीतापुरा में है। बाहर ढाबे, फास्ट फूड, ATM मिलते हैं। 1-2 km में प्राइवेट PG उपलब्ध हैं। सांगानेर बाज़ार 5km दूर है। कैंपस गेट से Ola/Uber और सिटी बसें आसानी से मिलती हैं।"]
+    },
+    {
+      "tag": "atm_banking",
+      "patterns": ["atm", "atm near college", "bank near college", "sbi atm", "cash withdrawal", "bank branch near jecrc"],
+      "responses": ["🏧 **ATM / Banking:**\n🔹 ATMs available just outside campus gate (SBI, HDFC, PNB).\n🔹 Nearest bank branch: ~1-2 km from campus.\n🔹 UPI/Digital payments accepted at canteen & shops.\n🔹 Fee payment: Online via college portal."],
+      "responses_hi": ["🏧 **ATM / बैंकिंग:**\n🔹 कैंपस गेट के बाहर ATM उपलब्ध (SBI, HDFC, PNB)।\n🔹 नज़दीकी बैंक शाखा: कैंपस से ~1-2 km।\n🔹 कैंटीन और दुकानों पर UPI/डिजिटल भुगतान स्वीकार।\n🔹 फीस भुगतान: कॉलेज पोर्टल से ऑनलाइन।"]
+    },
+    {
+      "tag": "college_holidays",
+      "patterns": ["holiday list", "college holiday", "vacation", "diwali holiday", "summer vacation", "winter break", "when college closed", "chutti kab hai", "college band kab hota hai", "holi holiday"],
+      "responses": ["📅 **Holidays:**\n🔹 Summer Vacation: May-July (~6-8 weeks)\n🔹 Diwali: ~1 week\n🔹 Winter Break: ~1 week (December)\n🔹 Holi: 2-3 days\n🔹 National holidays as per Govt calendar.\n📋 Full holiday list shared at semester start."],
+      "responses_hi": ["📅 **छुट्टियां:**\n🔹 गर्मी की छुट्टी: मई-जुलाई (~6-8 सप्ताह)\n🔹 दिवाली: ~1 सप्ताह\n🔹 शीतकालीन अवकाश: ~1 सप्ताह (दिसंबर)\n🔹 होली: 2-3 दिन\n🔹 सरकारी कैलेंडर के अनुसार राष्ट्रीय अवकाश।\n📋 पूरी छुट्टी सूची सेमेस्टर की शुरुआत में शेयर की जाती है।"]
+    },
+    {
+      "tag": "college_timing_detail",
+      "patterns": ["gate timing", "college gate open", "entry time", "late entry", "gate close time", "college kab khulta hai", "early morning class"],
+      "responses": ["🕐 **Gate / Entry Timings:**\n🔹 Gate opens: 7:30 AM\n🔹 Classes start: 9:00 AM\n🔹 Late entry: Allowed till 9:15 AM (after that marked absent for 1st lecture).\n🔹 Gate closes for entry: 10:00 AM (vary by semester).\n🔹 Exit after college hours: 4:30 PM (Mon-Fri), 1:30 PM (Sat)."],
+      "responses_hi": ["🕐 **गेट / एंट्री टाइमिंग:**\n🔹 गेट खुलता है: सुबह 7:30\n🔹 कक्षा शुरू: सुबह 9:00\n🔹 लेट एंट्री: 9:15 तक अनुमति (उसके बाद पहले लेक्चर में अनुपस्थित)।\n🔹 एंट्री के लिए गेट बंद: सुबह 10:00 (सेमेस्टर अनुसार बदल सकता है)।\n🔹 कॉलेज के बाद निकास: शाम 4:30 (सोम-शुक्र), दोपहर 1:30 (शनि)।"]
+    },
+    {
+      "tag": "college_reopening",
+      "patterns": ["college kab khulega", "reopening", "college start date", "new session", "admission start", "1st year start", "fresher orientation", "induction program"],
+      "responses": ["📅 **College Reopening / New Session:**\n🔹 New academic session starts in August.\n🔹 1st year orientation/induction: 1st week of August.\n🔹 Senior students: Classes resume as per academic calendar.\n🔹 REAP admission process: July-September.\n📋 Check website for exact dates each year."],
+      "responses_hi": ["📅 **कॉलेज री-ओपनिंग / नया सत्र:**\n🔹 नया शैक्षणिक सत्र अगस्त में शुरू होता है।\n🔹 1st Year ओरिएंटेशन/इंडक्शन: अगस्त का पहला सप्ताह।\n🔹 सीनियर छात्र: एकेडमिक कैलेंडर अनुसार कक्षाएं शुरू।\n🔹 REAP एडमिशन प्रक्रिया: जुलाई-सितंबर।\n📋 सटीक तारीखों के लिए हर साल वेबसाइट देखें।"]
+    },
+    {
+      "tag": "rainy_weather_closure",
+      "patterns": ["rain mein college", "flood", "weather", "college band rain", "heavy rain", "storm", "natural disaster"],
+      "responses": ["🌧️ **Weather / Emergency Closure:**\n🔹 College may declare holiday during heavy rainfall/storms.\n🔹 Notifications sent via SMS, WhatsApp groups, and ERP portal.\n🔹 Check official WhatsApp group or call: 0141-2770232.\n🔹 Hostel students remain on campus safely during emergencies."],
+      "responses_hi": ["🌧️ **मौसम / आपातकालीन बंद:**\n🔹 भारी बारिश/तूफान में कॉलेज छुट्टी घोषित कर सकता है।\n🔹 SMS, WhatsApp ग्रुप और ERP पोर्टल से नोटिफिकेशन भेजे जाते हैं।\n🔹 ऑफिशियल WhatsApp ग्रुप चेक करें या कॉल करें: 0141-2770232।\n🔹 इमरजेंसी में हॉस्टल छात्र कैंपस में सुरक्षित रहते हैं।"]
+    },
+    {
+      "tag": "part_time_job",
+      "patterns": ["part time job", "earn while study", "freelancing allowed", "work during college", "can i do job", "side income", "tuition padha sakte hai", "freelance"],
+      "responses": ["💼 **Part-time Work:**\n🔹 No restriction on freelancing/part-time.\n🔹 BUT 75% attendance mandatory!\n🔹 Many students freelance (web dev, content writing).\n⚠️ Don't let it affect academics!"],
+      "responses_hi": ["💼 **पार्ट-टाइम काम:**\n🔹 फ्रीलांसिंग/पार्ट-टाइम पर कोई प्रतिबंध नहीं।\n🔹 लेकिन 75% उपस्थिति अनिवार्य!\n🔹 कई छात्र फ्रीलांस करते हैं (वेब डेव, कंटेंट राइटिंग)।\n⚠️ पढ़ाई पर असर न पड़ने दें!"]
+    },
+    {
+      "tag": "outside_food_delivery",
+      "patterns": ["zomato", "swiggy", "food delivery", "order food", "outside food", "zomato allowed", "food delivery hostel"],
+      "responses": ["🍕 **Food Delivery:**\n🔹 Zomato/Swiggy delivery available at campus gate.\n🔹 Collect from gate - delivery persons not allowed inside.\n🔹 Hostel: Food delivery allowed before curfew timing.\n🔹 Campus canteen & mess are primary food sources.\n⚠️ No delivery after hostel curfew (9 PM boys / 7:30 PM girls)."],
+      "responses_hi": ["🍕 **फूड डिलीवरी:**\n🔹 कैंपस गेट पर Zomato/Swiggy डिलीवरी उपलब्ध।\n🔹 गेट से कलेक्ट करें - डिलीवरी व्यक्ति अंदर नहीं आ सकते।\n🔹 हॉस्टल: कर्फ्यू टाइम से पहले फूड डिलीवरी की अनुमति।\n🔹 कैंपस कैंटीन और मेस मुख्य भोजन स्रोत हैं।\n⚠️ हॉस्टल कर्फ्यू के बाद डिलीवरी नहीं (लड़के रात 9 / लड़कियां 7:30)।"]
+    },
+    {
+      "tag": "birthday_celebration",
+      "patterns": ["birthday celebration", "party allowed", "celebration campus", "cake cutting", "birthday in hostel", "party in college"],
+      "responses": ["🎂 **Celebrations on Campus:**\n🔹 Birthday celebrations allowed in hostel common area.\n🔹 Keep it decent and within hostel timings.\n❌ No cake smearing, water throwing, or loud music after 9 PM.\n❌ No outside food delivery after curfew.\n🔹 Celebrate responsibly! 🎉"],
+      "responses_hi": ["🎂 **कैंपस में जश्न:**\n🔹 हॉस्टल कॉमन एरिया में बर्थडे सेलिब्रेशन की अनुमति।\n🔹 शालीन रखें और हॉस्टल टाइमिंग के अंदर।\n❌ केक लगाना, पानी फेंकना या रात 9 बजे के बाद ज़ोर से म्यूज़िक नहीं।\n❌ कर्फ्यू के बाद बाहर से फूड डिलीवरी नहीं।\n🔹 ज़िम्मेदारी से मनाएं! 🎉"]
+    },
+    {
+      "tag": "relationship_dating",
+      "patterns": ["dating allowed", "girlfriend boyfriend", "couples", "relationship rules", "pda", "love"],
+      "responses": ["📋 **Campus Conduct:**\n🔹 JECRC expects professional behavior on campus.\n🔹 Maintain decorum in public areas.\n🔹 Focus on academics and personal growth.\n🔹 Any misconduct reported to Discipline Committee.\n💡 A healthy campus environment benefits everyone!"],
+      "responses_hi": ["📋 **कैंपस आचरण:**\n🔹 JECRC कैंपस में प्रोफेशनल व्यवहार की अपेक्षा रखता है।\n🔹 सार्वजनिक स्थानों पर शिष्टाचार बनाए रखें।\n🔹 पढ़ाई और व्यक्तिगत विकास पर ध्यान दें।\n🔹 किसी भी दुर्व्यवहार की रिपोर्ट अनुशासन समिति को।\n💡 स्वस्थ कैंपस वातावरण सबके लिए फायदेमंद है!"]
+    },
+    {
+      "tag": "gap_year",
+      "patterns": ["gap year", "year gap", "gap certificate", "gap after 12th", "is gap allowed"],
+      "responses": ["📋 **Gap Year:**\nYes, taking a drop for JEE preparation is completely normal. You just need to submit a 'Gap Certificate' (a notarized affidavit on stamp paper) during admission."],
+      "responses_hi": ["📋 **गैप ईयर:**\nहाँ, JEE की तैयारी के लिए ड्रॉप लेना बिल्कुल सामान्य है। आपको बस एडमिशन के समय 'गैप सर्टिफिकेट' (स्टाम्प पेपर पर नोटरीकृत शपथ पत्र) जमा करना होगा।"]
+    },
+    {
+      "tag": "mental_health_src",
+      "patterns": ["spiritual research cell", "src club", "src", "spiritual cell", "meditation"],
+      "responses": ["💚 **Spiritual Research Cell (SRC):**\nSRC at JECRC focuses on holistic development, stress management, meditation, and inner peace. It helps students balance academics with mental well-being!"],
+      "responses_hi": ["💚 **Spiritual Research Cell (SRC):**\nJECRC का SRC समग्र विकास, तनाव प्रबंधन, ध्यान और आंतरिक शांति पर केंद्रित है। यह छात्रों को पढ़ाई और मानसिक कल्याण के बीच संतुलन बनाने में मदद करता है!"]
+    },
+    {
+      "tag": "help",
+      "patterns": ["help", "help me", "what can you do", "options", "menu", "features", "commands", "guide me", "show options", "topics"],
+      "responses": ["🆘 **I Can Help You With:**\n📌 Admissions & Eligibility\n📌 Fees, Scholarships & Loans\n📌 Placements & Training\n📌 Hostel, Mess & Campus Life\n📌 Departments & Courses\n📌 Exams, Timetable & Syllabus\n📌 Clubs, Events & Sports\n📌 Safety, Grievances & Support\n\nJust type your question! (e.g., 'Tell me about hostel' or 'Fee structure kya hai?')"],
+      "responses_hi": ["🆘 **मैं इनमें मदद कर सकता हूँ:**\n📌 एडमिशन और पात्रता\n📌 फीस, छात्रवृत्ति और लोन\n📌 प्लेसमेंट और ट्रेनिंग\n📌 हॉस्टल, मेस और कैंपस लाइफ\n📌 डिपार्टमेंट और कोर्स\n📌 परीक्षा, टाइमटेबल और सिलेबस\n📌 क्लब, इवेंट्स और खेल\n📌 सुरक्षा, शिकायतें और सहायता\n\nबस अपना सवाल टाइप करें! (जैसे: 'हॉस्टल के बारे में बताओ' या 'फीस कितनी है?')"]
+    },
+    {
+      "tag": "unclear_retype",
+      "patterns": [
+        "asdf", "qwerty", "xyz", "random text", "aaa", "bbb",
+        "test", "testing", "check", "nothing", "idk", "dunno"
+      ],
+      "responses": [
+        "I couldn't understand that. 😅\n\nCould you please **retype your question** more clearly? For example:\n🔹 \"What is the admission process?\"\n🔹 \"Fee structure batao\"\n🔹 \"Hostel facilities kya hai?\"\n\nOr click on a topic from the sidebar! 👈",
+        "Hmm, I didn't quite catch that. 🤔\n\nPlease **try again** with a clearer question!\n\n💡 You can ask about: Admissions, Fees, Placements, Hostel, Exams, Campus Life\n\nOr type **\"help\"** to see all topics!"
+      ],
+      "responses_hi": [
+        "मैं आपकी बात समझ नहीं पाया। 😅\n\nकृपया अपना सवाल **दोबारा साफ़ शब्दों में लिखें!** जैसे:\n🔹 \"एडमिशन कैसे होता है?\"\n🔹 \"फीस कितनी है?\"\n🔹 \"हॉस्टल की सुविधाएं बताओ\"\n\nया साइडबार से कोई टॉपिक चुनें! 👈",
+        "हम्म, मैं समझ नहीं पाया। 🤔\n\nकृपया **दोबारा कोशिश करें** सरल सवाल के साथ!\n\n💡 आप पूछ सकते हैं: एडमिशन, फीस, प्लेसमेंट, हॉस्टल, परीक्षा, कैंपस लाइफ\n\nया **\"help\"** टाइप करें सभी विषय देखने के लिए!"
+      ]
+    },
+    {
+      "tag": "default",
+      "patterns": [
+        "unknown query",
+        "random question",
+        "out of syllabus",
+        "kuch bhi",
+        "no match",
+        "not understandable"
+      ],
+      "responses": [
+        "Sorry, I can't answer this now as I don't have enough data about it. 😔\n\nPlease contact JECRC Foundation either by visiting the campus or by:\n📞 Phone: 0141-2770232\n📧 Email: info@jecrcmail.com"
+      ],
+      "responses_hi": [
+        "माफ़ कीजिए, इसके बारे में मेरे पास अभी पर्याप्त जानकारी नहीं है। 😔\n\nकृपया JECRC Foundation से कैंपस विज़िट करके या इनसे संपर्क करें:\n📞 फोन: 0141-2770232\n📧 ईमेल: info@jecrcmail.com"
+      ]
+    }
+  ]
+}

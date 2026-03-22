@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+env/
+.env
+
+# Database (local only)
+*.db
+
+# Audio temp files
+static/audio_*.mp3
+
+# API keys
+api.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp files
+temp_*.webm
+temp_*.wav
+temp_*.ogg
+temp_*.mp4
